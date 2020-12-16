@@ -453,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041927380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6101546, y: -3.664059, z: 5.278401}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 972956361}
@@ -472,15 +472,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3400526caf17eb94e8b9e06c166c8a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
   damage:
     _usage: 0
     _value: 0
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
