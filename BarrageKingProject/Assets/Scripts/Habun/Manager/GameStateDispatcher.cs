@@ -1,16 +1,15 @@
-﻿using UnityAtoms.BaseAtoms;
-using UnityAtoms.FSM;
+﻿using UnityAtoms.FSM;
 using UnityEngine;
 
 namespace Habun
 {
     public class GameStateDispatcher : MonoSingleton<GameStateDispatcher>
     {
+        public static readonly string GAMESTART = "GameStart";
+        public static readonly string GAMEOVER = "GameOver";
+
         [SerializeField]
         private FiniteStateMachineReference gameState;
-
-        [SerializeField,Space]
-        private StringUnityEvent onState;
 
         // PROPERTIES: ---------------------------------------------------------
 
@@ -19,23 +18,22 @@ namespace Habun
             get { return gameState.Machine; }
         }
 
-        // MONOBEHAVIOUR METHODS: ----------------------------------------------------
+        // PUBLIC METHODS: ----------------------------------------------------
 
-        private void OnEnable()
+        public void DispatchGameStart(GameObject player)
         {
-            gameState.Machine.Changed.Register(OnState);
+            if (player != null)
+            {
+                GameState.Dispatch(command: GAMESTART);
+            }
         }
 
-        private void OnDisable()
+        public void DispatchGameOver(float health)
         {
-            gameState.Machine.Changed.Unregister(OnState);
-        }
-
-        // CALLBACK METHODS: ----------------------------------------------------
-
-        private void OnState(string state)
-        {
-            onState.Invoke(state);
+            if (health <= 0.0f)
+            {
+                GameState.Dispatch(command: GAMEOVER);
+            }
         }
 
     }
