@@ -7,20 +7,20 @@ using UnityEditor.Rendering;
 public class BulletBase : MonoBehaviour
 {
     public GameStatics.BULLET_TYPE bulletType = GameStatics.BULLET_TYPE.NORMAL1;
-    public Vector3 velocity = Vector3.one;
-    public Vector3 acceleration = Vector3.zero;
+    public float speed = 1f;
+    public float acceleration = 0f;
     public float radius = 5f;                   // Collider radius
 
-    public float maxLivingDuration = 10f;          
+    public float maxLivingDuration = 1000f;          
     public float maxLivingDistance = 500f;
 
     private float curTimer = 0;
     private Vector3 curVelocity = Vector3.zero;
 
-    private bool isFire = false;
+    [SerializeField] private bool isFire = false;
     private Vector3 initPosition = Vector3.zero;
 
-    Action<BulletBase> onDestroy;
+    public Action<BulletBase> onDestroy;
 
     public Vector3 GetDirection()
     {
@@ -28,11 +28,11 @@ public class BulletBase : MonoBehaviour
     }
 
 
-    protected virtual void Fire(GameStatics.BULLET_TYPE bulletType, float radius, Vector3 velocity, Vector3 acceleration, Vector3 direction)
+    public virtual void Fire(GameStatics.BULLET_TYPE bulletType, float radius, float speed, float acceleration, Vector3 direction)
     {
         this.bulletType = bulletType;
         this.radius = radius;
-        this.velocity = velocity;
+        this.speed = speed;
         this.acceleration = acceleration;
 
         Vector3 lookAtPoint = this.transform.position;
@@ -40,7 +40,7 @@ public class BulletBase : MonoBehaviour
 
         this.transform.LookAt(lookAtPoint);
 
-        this.curVelocity = velocity;
+        this.curVelocity = this.transform.forward * speed;
         this.curTimer = 0;
         this.initPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 
@@ -51,7 +51,9 @@ public class BulletBase : MonoBehaviour
     {
         if (isFire)
         {
-            curVelocity += acceleration;
+            if (Mathf.Approximately(acceleration, 0f) == false) speed += acceleration;
+            
+            curVelocity = this.transform.forward * speed;
 
             this.transform.position += curVelocity * Time.deltaTime;
 
