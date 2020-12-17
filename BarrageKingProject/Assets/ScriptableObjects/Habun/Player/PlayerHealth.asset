@@ -15,7 +15,7 @@ MonoBehaviour:
   _developerDescription: 
   _id: Health
   _value: 0
-  _changed: {fileID: 0}
+  _changed: {fileID: 11400000, guid: f1b9ecec6fdfb7e44943c329c2b17c96, type: 2}
   _changedWithHistory: {fileID: 0}
   _triggerChangedOnOnEnable: 0
   _triggerChangedWithHistoryOnOnEnable: 0

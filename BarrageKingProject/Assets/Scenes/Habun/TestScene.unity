@@ -494,6 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506212068}
   - component: {fileID: 1506212067}
+  - component: {fileID: 1506212069}
   m_Layer: 0
   m_Name: Game State
   m_TagString: Untagged
@@ -526,9 +527,6 @@ MonoBehaviour:
     _usage: 0
     _fsm: {fileID: 0}
     _fsmInstancer: {fileID: 0}
-  onState:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1506212068
 Transform:
   m_ObjectHideFlags: 0
@@ -543,6 +541,135 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506212069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506212066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e0a02aa2c93f64aac5c5c125dc6728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: wave
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 6
+      Data: 
+    - Name: spawnCount
+      Entry: 3
+      Data: 0
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 0
+    - Name: maxRadius
+      Entry: 4
+      Data: 0
+    - Name: spawnPositions
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 6
+      Data: 
+    - Name: spawnCount
+      Entry: 3
+      Data: 0
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 0
+    - Name: maxRadius
+      Entry: 4
+      Data: 0
+    - Name: spawnPositions
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  spawnList: {fileID: 0}
+  spawnOffset: {x: 0, y: 0, z: 0}
+  waveNumber:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &1732442575
 GameObject:
   m_ObjectHideFlags: 0
