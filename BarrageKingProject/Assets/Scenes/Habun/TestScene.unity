@@ -513,10 +513,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bafbb9577e35f43abf2c2b51ee8f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStateMachine:
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  gameState:
     _usage: 0
     _fsm: {fileID: 0}
     _fsmInstancer: {fileID: 0}
+  onState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1506212068
 Transform:
   m_ObjectHideFlags: 0

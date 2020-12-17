@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 /// http://wiki.unity3d.com/index.php/Singleton
 /// <summary>
@@ -8,7 +9,7 @@
 /// 
 /// As a note, this is made as MonoBehaviour because we need Coroutines.
 /// </summary>
-public class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
+public class MonoSingleton<T> : SerializedMonoBehaviour where T : MonoSingleton<T>
 {
 	private static T _instance;
 
