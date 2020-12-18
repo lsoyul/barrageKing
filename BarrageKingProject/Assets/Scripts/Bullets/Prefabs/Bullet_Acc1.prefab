@@ -4883,7 +4883,6 @@ GameObject:
   - component: {fileID: 5612192975642914808}
   - component: {fileID: 6373421553240882481}
   - component: {fileID: 8342438686266357758}
-  - component: {fileID: 2892959789035775402}
   m_Layer: 0
   m_Name: Bullet_Acc1
   m_TagString: Untagged
@@ -9790,26 +9789,6 @@ MonoBehaviour:
   maxLivingDistance: 500
   trailRenderer: []
   isFire: 0
---- !u!114 &2892959789035775402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2315010535543032137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca30d25de2ecd7488f81da0eaebe811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_radius: 0
-  neighborType: 0
-  shape:
-    type: 0
-    radius: 1
-    length: 1
-  debugDrawShape: 0
-  activeSettings: {fileID: 11400000, guid: d749565fa040e6d41a4209f21e978a16, type: 2}
 --- !u!1 &3486580917056024179
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1260902547690954729}
   - component: {fileID: 1310485903392130163}
   - component: {fileID: 2275452401925383568}
-  - component: {fileID: 3680559745991062265}
   m_Layer: 0
   m_Name: Bullet_Volcano
   m_TagString: Untagged
@@ -4930,26 +4929,6 @@ MonoBehaviour:
   maxLivingDistance: 500
   trailRenderer: []
   isFire: 0
---- !u!114 &3680559745991062265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422605788120048079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca30d25de2ecd7488f81da0eaebe811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_radius: 0
-  neighborType: 0
-  shape:
-    type: 0
-    radius: 1
-    length: 1
-  debugDrawShape: 0
-  activeSettings: {fileID: 11400000, guid: d749565fa040e6d41a4209f21e978a16, type: 2}
 --- !u!1 &1422717896143343797
 GameObject:
   m_ObjectHideFlags: 0

@@ -654,21 +654,7 @@ MonoBehaviour:
   sleepChance: 0
   maxCellCapacity: 10
   capCellCapacity: 1
-  startingPopulations:
-  - prefab: {fileID: 2892959789035775402, guid: 57e6c592dfa091043990872b5a4e13f6, type: 3}
-    population: 10
-  - prefab: {fileID: 4035323784468459354, guid: 3718b3e4479663247ae406efc5054742, type: 3}
-    population: 10
-  - prefab: {fileID: 2581993180580847212, guid: d56db1a77f07efe4f9ebb3fdf35242ac, type: 3}
-    population: 10
-  - prefab: {fileID: 4201679566243647707, guid: e3635aa3162bf2b49bb3ebe9fc21b5b0, type: 3}
-    population: 10
-  - prefab: {fileID: -350646163099871000, guid: 54440f1296caf1d40a47d5a654062c62, type: 3}
-    population: 10
-  - prefab: {fileID: 3680559745991062265, guid: 9cce5ab01275ff140847ddc023cfa163, type: 3}
-    population: 10
-  - prefab: {fileID: 6698648936089759867, guid: 558268ca67135a54a9c8b6bcc8c413c9, type: 3}
-    population: 10
+  startingPopulations: []
   drawGizmos: 1
 --- !u!4 &812344058
 Transform:
