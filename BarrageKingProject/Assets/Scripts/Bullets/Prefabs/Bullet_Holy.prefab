@@ -4928,6 +4928,7 @@ GameObject:
   - component: {fileID: 366378016957765227}
   - component: {fileID: 450861324118836483}
   - component: {fileID: 6406645621274254750}
+  - component: {fileID: 2581993180580847212}
   m_Layer: 0
   m_Name: Bullet_Holy
   m_TagString: Untagged
@@ -4944,7 +4945,7 @@ Transform:
   m_GameObject: {fileID: 564385529380544769}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.9, y: 2.74, z: -11.450259}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 565547513041271679}
   - {fileID: 3940330623672621425}
@@ -9863,6 +9864,26 @@ MonoBehaviour:
   maxLivingDistance: 500
   trailRenderer: []
   isFire: 0
+--- !u!114 &2581993180580847212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564385529380544769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca30d25de2ecd7488f81da0eaebe811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radius: 0
+  neighborType: 0
+  shape:
+    type: 0
+    radius: 1
+    length: 1
+  debugDrawShape: 0
+  activeSettings: {fileID: 11400000, guid: 27ebc342c0b31ed44b89b4bb3930e31b, type: 2}
 --- !u!1 &564435178767740609
 GameObject:
   m_ObjectHideFlags: 0

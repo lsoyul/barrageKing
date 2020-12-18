@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1260902547690954729}
   - component: {fileID: 1310485903392130163}
   - component: {fileID: 2275452401925383568}
+  - component: {fileID: 3680559745991062265}
   m_Layer: 0
   m_Name: Bullet_Volcano
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1422605788120048079}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 4.41, y: 4.5, z: -12.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1420104778835103789}
   - {fileID: 1417430194061855545}
@@ -4929,6 +4930,26 @@ MonoBehaviour:
   maxLivingDistance: 500
   trailRenderer: []
   isFire: 0
+--- !u!114 &3680559745991062265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422605788120048079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca30d25de2ecd7488f81da0eaebe811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radius: 0
+  neighborType: 0
+  shape:
+    type: 0
+    radius: 1
+    length: 1
+  debugDrawShape: 0
+  activeSettings: {fileID: 11400000, guid: 27ebc342c0b31ed44b89b4bb3930e31b, type: 2}
 --- !u!1 &1422717896143343797
 GameObject:
   m_ObjectHideFlags: 0
