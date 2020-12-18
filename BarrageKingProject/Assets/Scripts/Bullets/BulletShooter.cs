@@ -12,7 +12,9 @@ public class BulletShooter : MonoBehaviour
 
     int curPatternIndex = 0;
 
+    public bool autoStart = true;
     public List<pattern> patternList;
+    
 
     [Serializable]
     public struct pattern
@@ -34,6 +36,12 @@ public class BulletShooter : MonoBehaviour
         curPatternIndex = 0;
     }
 
+    private void Start()
+    {
+        if (autoStart) firing = true;
+        else firing = false;
+    }
+
 
     public void Update()
     {
@@ -43,7 +51,8 @@ public class BulletShooter : MonoBehaviour
 
             if (timer > patternList[curPatternIndex].delay)
             {
-                BulletManager.Instance().FireBullet(patternList[curPatternIndex].bulletType, this.transform.position, 5f, patternList[curPatternIndex].speed, patternList[curPatternIndex].acceleration, this.transform.forward);
+                if (patternList[curPatternIndex].bulletType != GameStatics.BULLET_TYPE.NONE)
+                    BulletManager.Instance().FireBullet(patternList[curPatternIndex].bulletType, this.transform.position, 5f, patternList[curPatternIndex].speed, patternList[curPatternIndex].acceleration, this.transform.forward);
 
                 if (++curPatternIndex >= patternList.Count) curPatternIndex = 0;
 

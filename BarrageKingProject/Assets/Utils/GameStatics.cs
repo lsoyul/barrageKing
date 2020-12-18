@@ -26,6 +26,7 @@ public static class GameStatics
 
     public enum BULLET_TYPE
     {
+        NONE,
         ARROW,
         HOLY,
         ICE,

@@ -75,7 +75,7 @@ public class BulletManager : MonoBehaviour
                     createdGo.GetComponent<BulletBase>().onDestroy = OnDestroyBullet;
                     createdGo.SetActive(false);
 
-                    if (bulletRoot != null) createdGo.transform.parent = bulletRoot.transform;
+                    createdGo.transform.parent = bulletRoot.transform;
 
                     bulletPool[newBullet.bulletType].Add(createdGo);
                 }
@@ -108,7 +108,7 @@ public class BulletManager : MonoBehaviour
             {
                 GameObject newGo = CreateNewBullet(bulletType);
 
-                if (bulletRoot != null) newGo.transform.parent = bulletRoot.transform;
+                newGo.transform.parent = bulletRoot.transform;
 
                 newGo.transform.position = startWorldPos;
                 newGo.SetActive(true);
@@ -137,7 +137,7 @@ public class BulletManager : MonoBehaviour
                 GameObject go = Instantiate(item.prefab);
                 go.GetComponent<BulletBase>().onDestroy = OnDestroyBullet;
 
-                return Instantiate(item.prefab);
+                return go;
             }
         }
 

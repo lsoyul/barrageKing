@@ -4916,10 +4916,11 @@ MonoBehaviour:
   speed: 1
   acceleration: 0
   radius: 5
-  maxLivingDuration: 1000
-  maxLivingDistance: 500
+  maxLivingDuration: 20
+  maxLivingDistance: 14
   trailRenderer: []
   isFire: 0
+  initPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &5444434087625752418
 GameObject:
   m_ObjectHideFlags: 0

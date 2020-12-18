@@ -20,7 +20,7 @@ public class BulletBase : MonoBehaviour
     private Vector3 curVelocity = Vector3.zero;
 
     [SerializeField] private bool isFire = false;
-    private Vector3 initPosition = Vector3.zero;
+    [SerializeField] private Vector3 initPosition = Vector3.zero;
 
     public Action<BulletBase> onDestroy;
 
