@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour
         timer += Time.deltaTime;
         if(timer > shootDelay)
         {
-            BulletManager.Instance().FireBullet(GameStatics.BULLET_TYPE.ICE, this.transform.position, radius, 1, 1, this.transform.forward);
+            BulletManager.Instance().FireBullet(GameStatics.BULLET_TYPE.ICE, this.transform.position, radius, 1, 0, this.transform.forward);
             timer = 0;
         }
 
