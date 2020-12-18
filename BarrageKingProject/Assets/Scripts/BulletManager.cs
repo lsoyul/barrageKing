@@ -94,8 +94,8 @@ public class BulletManager : MonoBehaviour
             {
                 if (go.activeSelf == false)
                 {
-                    go.SetActive(true);
                     go.transform.position = startWorldPos;
+                    go.SetActive(true);
                     BulletBase bullet = go.GetComponentInParent<BulletBase>();
                     bullet.Fire(bulletType, radius, speed, acceleration, direction);
 
@@ -110,13 +110,11 @@ public class BulletManager : MonoBehaviour
 
                 if (bulletRoot != null) newGo.transform.parent = bulletRoot.transform;
 
-                newGo.SetActive(true);
                 newGo.transform.position = startWorldPos;
+                newGo.SetActive(true);
 
                 BulletBase bullet = newGo.GetComponentInParent<BulletBase>();
                 bullet.Fire(bulletType, radius, speed, acceleration, direction);
-
-
 
                 bulletPool[bulletType].Add(newGo);
             }

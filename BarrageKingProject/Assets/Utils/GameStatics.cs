@@ -26,8 +26,12 @@ public static class GameStatics
 
     public enum BULLET_TYPE
     {
-        NORMAL1,
-        ACCELERATION1,
+        ARROW,
+        HOLY,
+        ICE,
+        STONE,
+        VOLCANO,
+        ACC1,
     }
 
     public enum ENEMY_TYPE
@@ -63,12 +67,20 @@ public static class GameStatics
     {
         switch (bulletType)
         {
-            case BULLET_TYPE.NORMAL1:
-                return 10f;
-            case BULLET_TYPE.ACCELERATION1:
-                return 15f;
+            case BULLET_TYPE.ARROW:
+                return 10;
+            case BULLET_TYPE.HOLY:
+                return 15;
+            case BULLET_TYPE.ICE:
+                return 5;
+            case BULLET_TYPE.STONE:
+                return 10;
+            case BULLET_TYPE.VOLCANO:
+                return 20;
+            case BULLET_TYPE.ACC1:
+                return 10;
             default:
-                return 10f;
+                return 10;
         }
     }
 

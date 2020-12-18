@@ -78,7 +78,19 @@ MonoBehaviour:
   bulletInfoList:
   - bulletType: 0
     prefab: {fileID: 7316726880389294543, guid: 558268ca67135a54a9c8b6bcc8c413c9, type: 3}
-    bulletPoolCount: 50
+    bulletPoolCount: 30
   - bulletType: 1
+    prefab: {fileID: 564385529380544769, guid: d56db1a77f07efe4f9ebb3fdf35242ac, type: 3}
+    bulletPoolCount: 30
+  - bulletType: 2
+    prefab: {fileID: 5444321962816802328, guid: e3635aa3162bf2b49bb3ebe9fc21b5b0, type: 3}
+    bulletPoolCount: 30
+  - bulletType: 3
+    prefab: {fileID: 6536172420719666863, guid: 54440f1296caf1d40a47d5a654062c62, type: 3}
+    bulletPoolCount: 30
+  - bulletType: 4
+    prefab: {fileID: 1422605788120048079, guid: 9cce5ab01275ff140847ddc023cfa163, type: 3}
+    bulletPoolCount: 30
+  - bulletType: 5
     prefab: {fileID: 2315010535543032137, guid: 57e6c592dfa091043990872b5a4e13f6, type: 3}
-    bulletPoolCount: 50
+    bulletPoolCount: 30

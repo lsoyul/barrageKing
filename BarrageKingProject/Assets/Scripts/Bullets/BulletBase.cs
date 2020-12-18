@@ -6,13 +6,15 @@ using UnityEditor.Rendering;
 
 public class BulletBase : MonoBehaviour
 {
-    public GameStatics.BULLET_TYPE bulletType = GameStatics.BULLET_TYPE.NORMAL1;
+    public GameStatics.BULLET_TYPE bulletType = GameStatics.BULLET_TYPE.STONE;
     public float speed = 1f;
     public float acceleration = 0f;
     public float radius = 5f;                   // Collider radius
 
     public float maxLivingDuration = 1000f;          
     public float maxLivingDistance = 500f;
+
+    public List<TrailRenderer> trailRenderer;
 
     private float curTimer = 0;
     private Vector3 curVelocity = Vector3.zero;
@@ -63,6 +65,17 @@ public class BulletBase : MonoBehaviour
                 || Vector3.Distance(this.gameObject.transform.position, this.initPosition) > maxLivingDistance)
             {
                 // if (living time over) or (far away from max distance) than return to datapool
+                isFire = false;
+
+                if (trailRenderer != null && trailRenderer.Count > 0)
+                {
+                    foreach (var trailer in trailRenderer)
+                    {
+                        trailer.Clear();
+                    }
+                }
+                    
+
                 if (onDestroy != null) onDestroy(this);
             }
         }
