@@ -126,7 +126,7 @@ namespace CloudFine
             }
         }
 
-        protected void LockPosition(bool isLocked)
+        public void LockPosition(bool isLocked)
         {
             freezePosition = isLocked;
         }
