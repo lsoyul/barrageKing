@@ -9,7 +9,7 @@ namespace SGoap
     {
         public Color GizmozColor = Color.red;
 
-        public float MaxRange = 8;
+        public float MaxRange = 5;
         public float MinRange = 1;
 
         [Effect]
@@ -17,9 +17,9 @@ namespace SGoap
 
         private AgentBasicData _agentData;
 
-        private void Update()
+        private void LateUpdate()
         {
-            if (_agentData.DistanceToTarget <= MaxRange)
+            if (_agentData.Target && _agentData.DistanceToTarget <= MaxRange)
                 _agentData.Agent.States.SetState(State.Key, 1);
             else
                 _agentData.Agent.States.RemoveState(State.Key);

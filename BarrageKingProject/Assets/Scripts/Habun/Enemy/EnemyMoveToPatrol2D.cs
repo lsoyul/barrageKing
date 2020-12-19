@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using SGoap;
+﻿using SGoap;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 namespace Habun
@@ -8,22 +8,31 @@ namespace Habun
     {
         [SerializeField]
         private FovTargetSensor sensor;
-
         [SerializeField]
-        private List<Transform> patrols;
+        private GameObjectValueList patrols;
+
         [SerializeField]
         private Transform moveTarget;
+        [SerializeField]
+        private float moveSpeed = 4.0f;
+        [SerializeField]
+        private float lerpDelta = 8.0f;
 
-        [SerializeField]
-        private float moveSpeed = 5.0f;
-        [SerializeField]
-        private float lerpDelta = 2.0f;
+        public override bool PrePerform()
+        {
+            if (patrols.Count == 0)
+            {
+                return false;
+            }
+
+            return base.PrePerform();
+        }
 
         public override EActionStatus Perform()
         {
-            moveTarget = moveTarget ?? patrols[Random.Range(0, patrols.Count)];
-            
-            if (Vector3.Distance(moveTarget.position, AgentData.Position) < 1.0f)
+            moveTarget = moveTarget ? moveTarget : patrols.Get(Random.Range(0, patrols.Count)).transform;
+
+            if (Vector3.Distance(moveTarget.position, AgentData.Position) < 0.5f)
             {
                 moveTarget = null;
             }

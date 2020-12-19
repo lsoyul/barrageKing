@@ -7,8 +7,8 @@ namespace Habun
 {
     public class EnemyAttack3D : BasicAction
     {
-        public override float CooldownTime => 2;
-        public override float StaggerTime => 1.5f;
+        public override float CooldownTime => 1.0f;
+        public override float StaggerTime => 0.5f;
 
         [SerializeField]
         private List<BulletShooter> bullets;
@@ -23,22 +23,17 @@ namespace Habun
             return base.PrePerform();
         }
 
-        public override EActionStatus Perform()
-        {
-            return !Cooldown.Active ? EActionStatus.Success : EActionStatus.Failed;
-        }
-
         public override bool PostPerform()
         {
             foreach (var bullet in bullets)
             {
-                //bullet.StartShooting();
+                bullet.StopShooting();
             }
 
-            return base.PrePerform();
+            return base.PostPerform();
         }
 
-        public new void Bind(AgentBasicData data)
+        public override void Bind(AgentBasicData data)
         {
             base.Bind(data);
 
