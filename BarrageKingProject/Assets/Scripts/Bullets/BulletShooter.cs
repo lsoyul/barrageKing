@@ -36,6 +36,14 @@ public class BulletShooter : MonoBehaviour
         curPatternIndex = 0;
     }
 
+    public void StopShooting()
+    {
+        firing = true;
+
+        timer = 0;
+        curPatternIndex = 0;
+    }
+
     private void Start()
     {
         if (autoStart) firing = true;

@@ -9781,12 +9781,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f902566ba967d344aaf67caf7cdf5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 5
+  bulletType: 0
   speed: 1
   acceleration: 1
   radius: 5
   maxLivingDuration: 20
   maxLivingDistance: 14
+  object_3d: {fileID: 0}
+  object_2d: {fileID: 0}
   trailRenderer: []
   isFire: 0
   initPosition: {x: 0, y: 0, z: 0}
