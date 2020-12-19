@@ -724,7 +724,7 @@ namespace Sirenix.OdinInspector.Modules.UnityMathematics.Editor
         }
     }
 
-    public class Int2Drawer : OdinValueDrawer<int2>
+    public class Int2Drawer : OdinValueDrawer<int3>
     {
         private bool isMatrixChild;
 
@@ -802,7 +802,7 @@ namespace Sirenix.OdinInspector.Modules.UnityMathematics.Editor
         }
     }
 
-    public class UInt2Drawer : OdinValueDrawer<uint2>
+    public class UInt2Drawer : OdinValueDrawer<uint3>
     {
         private bool isMatrixChild;
 

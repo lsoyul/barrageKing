@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEditor.Rendering;
+using NUnit.Framework.Constraints;
 
 public class BulletBase : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class BulletBase : MonoBehaviour
 
     public float maxLivingDuration = 1000f;          
     public float maxLivingDistance = 500f;
+
+    [Header(" - Graphic change - ")]
+    public GameObject object_3d;
+    public GameObject object_2d;
+
+    int currentView = 3;
 
     public List<TrailRenderer> trailRenderer;
 
@@ -47,6 +54,35 @@ public class BulletBase : MonoBehaviour
         this.initPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 
         this.isFire = true;
+
+        SetObjectDimensional();
+    }
+
+    [ContextMenu("ChangeDemension")]
+    void ChangeDimention()
+    {
+        if (currentView == 3)
+        {
+            currentView = 2;
+            object_2d.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+        }
+        else currentView = 3;
+
+        SetObjectDimensional();
+    }
+
+    void SetObjectDimensional()
+    {
+        if (currentView == 3)
+        {
+            object_3d.SetActive(true);
+            object_2d.SetActive(false);
+        }
+        else if (currentView == 2)
+        {
+            object_3d.SetActive(false);
+            object_2d.SetActive(true);
+        }
     }
 
     protected virtual void Update()
