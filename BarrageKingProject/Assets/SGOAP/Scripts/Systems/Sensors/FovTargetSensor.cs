@@ -4,9 +4,14 @@ namespace SGoap
 {
     public class FovTargetSensor : MonoBehaviour, IDataBind<AgentBasicData>
     {
+        public Color GizmozColor = Color.red;
+
         [Range(0, 360)]
         public float Angle = 60;
         public float Radius = 20;
+
+        [Effect]
+        public State State;
 
         private AgentBasicData _agentData;
 
@@ -21,6 +26,14 @@ namespace SGoap
                 return;
 
             FindTargetWithinSight();
+        }
+
+        private void LateUpdate()
+        {
+            if (Target != null)
+                _agentData.Agent.States.SetState(State.Key, 1);
+            else
+                _agentData.Agent.States.RemoveState(State.Key);
         }
 
         public void FindTargetWithinSight()
@@ -65,7 +78,7 @@ namespace SGoap
             Debug.DrawLine(transform.position, posL, Color.blue);
             Debug.DrawLine(transform.position, posR, Color.blue);
 
-            Gizmos.color = Color.red;
+            Gizmos.color = GizmozColor;
             Gizmos.DrawWireSphere(transform.position, Radius);
         }
 
