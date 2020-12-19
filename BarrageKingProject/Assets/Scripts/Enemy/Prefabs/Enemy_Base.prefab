@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1399795949}
   - component: {fileID: 6652251909108054824}
   m_Layer: 0
-  m_Name: CameraSensor
+  m_Name: GridSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27666b48c4097c04080d4c5d1d40c1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State:
+    KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
 --- !u!1 &3539750353621599140
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,12 +168,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf332cd77c55e2a48a51c2fbbbf8c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Attack
+  Name: Attack2D
   Cost: 1
   CostEvaluator: {fileID: 0}
   UsableEvaluator: {fileID: 0}
   AbortEvaluator: {fileID: 0}
   PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
   - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
     Concatenator: {fileID: 0}
     StateType: 0
@@ -189,10 +202,7 @@ MonoBehaviour:
   CostEvaluationType: 0
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
-  steering: {fileID: 0}
-  fov: {fileID: 3539750354017221327}
-  lerpDelta: 5
-  bullet: {fileID: 0}
+  bullets: []
 --- !u!1 &3539750353880005528
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,19 +388,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d6ba120dc2e2f4dbda548eeb4fe283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Action
+  Name: MoveToTarget2D
   Cost: 1
   CostEvaluator: {fileID: 0}
   UsableEvaluator: {fileID: 0}
   AbortEvaluator: {fileID: 0}
-  PreConditions: []
-  AfterEffects: []
+  PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  AfterEffects:
+  - KeyReference: {fileID: 11400000, guid: 9b2981ea1f10c49499afaa334c42b4e9, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
   CostEvaluationType: 0
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
-  steering: {fileID: 0}
   moveDistance: 5
-  moveSpeed: 10
+  moveSpeed: 5
   lerpDelta: 2
 --- !u!1 &3539750354436673572
 GameObject:
@@ -471,6 +498,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d84ce89c1669d46b92d86d6d66c4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: MoveToPatrol2D
+  Cost: 1
+  CostEvaluator: {fileID: 0}
+  UsableEvaluator: {fileID: 0}
+  AbortEvaluator: {fileID: 0}
+  PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 4
+  AfterEffects:
+  - KeyReference: {fileID: 11400000, guid: 5ace444dc288bc04abd2e9987a1f11ba, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  CostEvaluationType: 0
+  AchievableEvaluationType: 0
+  AbortEvaluatorType: 0
+  sensor: {fileID: 0}
+  patrols: []
+  moveTarget: {fileID: 0}
+  moveSpeed: 5
+  lerpDelta: 2
 --- !u!1 &4968174125196671943
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,20 +574,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20f65d1be484cfb47833e06a6229138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Action
+  Name: Attack3D
   Cost: 1
   CostEvaluator: {fileID: 0}
   UsableEvaluator: {fileID: 0}
   AbortEvaluator: {fileID: 0}
-  PreConditions: []
-  AfterEffects: []
+  PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 4
+  - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  - KeyReference: {fileID: 11400000, guid: 4b12fbeb5da71074c9030d52aef165e8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  AfterEffects:
+  - KeyReference: {fileID: 11400000, guid: 8c58deb410c44cc46bcd304280b29ce7, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
   CostEvaluationType: 0
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
-  steering: {fileID: 0}
-  fov: {fileID: 0}
-  lerpDelta: 5
-  bullet: {fileID: 0}
+  bullets: []
 --- !u!1 &7686150678288450262
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,24 +652,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca23f6e52434ed2448d576e485ac5670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: MoveToTarget
+  Name: MoveToTarget3D
   Cost: 1
   CostEvaluator: {fileID: 0}
   UsableEvaluator: {fileID: 0}
   AbortEvaluator: {fileID: 0}
   PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 4
   - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
     Concatenator: {fileID: 0}
     StateType: 0
     Value: 0
     StringValue: 
     Operator: 0
-  - KeyReference: {fileID: 11400000, guid: 4b12fbeb5da71074c9030d52aef165e8, type: 2}
-    Concatenator: {fileID: 0}
-    StateType: 0
-    Value: 0
-    StringValue: 
-    Operator: 4
   AfterEffects:
   - KeyReference: {fileID: 11400000, guid: 9b2981ea1f10c49499afaa334c42b4e9, type: 2}
     Concatenator: {fileID: 0}
@@ -599,9 +680,8 @@ MonoBehaviour:
   CostEvaluationType: 0
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
-  steering: {fileID: 0}
   moveDistance: 5
-  moveSpeed: 10
+  moveSpeed: 5
   lerpDelta: 2
 --- !u!1 &8362046700892569931
 GameObject:
@@ -646,3 +726,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b77886d14c7a145bd0bf9f2883bc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: MoveToPatrol3D
+  Cost: 1
+  CostEvaluator: {fileID: 0}
+  UsableEvaluator: {fileID: 0}
+  AbortEvaluator: {fileID: 0}
+  PreConditions:
+  - KeyReference: {fileID: 11400000, guid: a6d978396b47f8447ad5ce72cbeca3d8, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 4
+  - KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 4
+  AfterEffects:
+  - KeyReference: {fileID: 11400000, guid: 5ace444dc288bc04abd2e9987a1f11ba, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  CostEvaluationType: 0
+  AchievableEvaluationType: 0
+  AbortEvaluatorType: 0
+  sensor: {fileID: 0}
+  patrols: {fileID: 0}
+  moveTransform: {fileID: 0}
+  moveSpeed: 5
+  lerpDelta: 2

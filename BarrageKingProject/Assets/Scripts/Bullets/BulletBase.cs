@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEditor.Rendering;
 using NUnit.Framework.Constraints;
+using Adohi;
+using Sirenix.OdinInspector.Editor;
 
 public class BulletBase : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class BulletBase : MonoBehaviour
     [Header(" - Graphic change - ")]
     public GameObject object_3d;
     public GameObject object_2d;
+    public ParticleSystem viewChange2dEffect;
+    public ParticleSystem viewChange3dEffect;
 
     int currentView = 3;
 
@@ -55,35 +59,80 @@ public class BulletBase : MonoBehaviour
 
         this.isFire = true;
 
-        SetObjectDimensional();
-    }
-
-    [ContextMenu("ChangeDemension")]
-    void ChangeDimention()
-    {
-        if (currentView == 3)
+        if (ViewPointManager.Instance != null)
         {
-            currentView = 2;
-            object_2d.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
-        }
-        else currentView = 3;
+            ViewPointManager.Instance.OnViewChangedStartTo2D += OnViewChangedStartTo2D;
+            ViewPointManager.Instance.OnViewChangedStartTo3D += OnViewChangedStartTo3D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D += OnViewChangedMiddleTo2D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D += OnViewChangedMiddleTo3D;
+            ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
 
-        SetObjectDimensional();
+            SetObjectDimensional();
+        }
+
+        viewChange2dEffect.gameObject.SetActive(false);
+        viewChange3dEffect.gameObject.SetActive(false);
+
     }
 
     void SetObjectDimensional()
     {
-        if (currentView == 3)
+        switch (ViewPointManager.Instance.currentViewPoint)
         {
-            object_3d.SetActive(true);
-            object_2d.SetActive(false);
-        }
-        else if (currentView == 2)
-        {
-            object_3d.SetActive(false);
-            object_2d.SetActive(true);
+            case ViewPoint.twoDimensional:
+                object_2d.SetActive(true);
+                object_3d.SetActive(false);
+                break;
+            case ViewPoint.threeDimensional:
+                object_2d.SetActive(false);
+                object_3d.SetActive(true);
+                break;
+            default:
+                break;
         }
     }
+
+    public void OnViewChangedStartTo2D()
+    {
+    }
+
+    public void OnViewChangedStartTo3D()
+    {
+
+    }
+
+    public void OnViewChangedMiddleTo2D()
+    {
+        object_2d.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+        object_2d.SetActive(true);
+        object_3d.SetActive(false);
+
+        viewChange2dEffect.gameObject.SetActive(true);
+        viewChange2dEffect.Play();
+    }
+
+    public void OnViewChangedMiddleTo3D()
+    {
+        object_3d.SetActive(true);
+        object_2d.SetActive(false);
+
+        viewChange3dEffect.gameObject.SetActive(true);
+        viewChange3dEffect.Play();
+    }
+
+    public void OnViewChangedEndTo2D()
+    {
+        viewChange2dEffect.Stop();
+        viewChange2dEffect.gameObject.SetActive(false);
+    }
+
+    public void OnViewChangedEndTo3D()
+    {
+        viewChange3dEffect.Stop();
+        viewChange3dEffect.gameObject.SetActive(false);
+    }
+
 
     protected virtual void Update()
     {
@@ -101,20 +150,36 @@ public class BulletBase : MonoBehaviour
                 || Vector3.Distance(this.gameObject.transform.position, this.initPosition) > maxLivingDistance)
             {
                 // if (living time over) or (far away from max distance) than return to datapool
-                isFire = false;
 
-                if (trailRenderer != null && trailRenderer.Count > 0)
-                {
-                    foreach (var trailer in trailRenderer)
-                    {
-                        trailer.Clear();
-                    }
-                }
-                    
-
-                if (onDestroy != null) onDestroy(this);
+                OnDestroyBullet();
             }
         }
     }
 
+
+    void OnDestroyBullet()
+    {
+        isFire = false;
+
+        if (ViewPointManager.Instance != null)
+        {
+            ViewPointManager.Instance.OnViewChangedStartTo2D -= OnViewChangedStartTo2D;
+            ViewPointManager.Instance.OnViewChangedStartTo3D -= OnViewChangedStartTo3D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D -= OnViewChangedMiddleTo2D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D -= OnViewChangedMiddleTo3D;
+            ViewPointManager.Instance.OnViewChangedEndTo2D -= OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D -= OnViewChangedEndTo3D;
+
+            if (trailRenderer != null && trailRenderer.Count > 0)
+            {
+                foreach (var trailer in trailRenderer)
+                {
+                    trailer.Clear();
+                }
+            }
+
+
+            if (onDestroy != null) onDestroy(this);
+        }
+    }
 }

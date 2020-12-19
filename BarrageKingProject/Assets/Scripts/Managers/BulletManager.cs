@@ -96,7 +96,7 @@ public class BulletManager : MonoBehaviour
                 {
                     go.transform.position = startWorldPos;
                     go.SetActive(true);
-                    BulletBase bullet = go.GetComponentInParent<BulletBase>();
+                    BulletBase bullet = go.GetComponent<BulletBase>();
                     bullet.Fire(bulletType, radius, speed, acceleration, direction);
 
                     poolLimitOver = false;
@@ -113,7 +113,7 @@ public class BulletManager : MonoBehaviour
                 newGo.transform.position = startWorldPos;
                 newGo.SetActive(true);
 
-                BulletBase bullet = newGo.GetComponentInParent<BulletBase>();
+                BulletBase bullet = newGo.GetComponent<BulletBase>();
                 bullet.Fire(bulletType, radius, speed, acceleration, direction);
 
                 bulletPool[bulletType].Add(newGo);

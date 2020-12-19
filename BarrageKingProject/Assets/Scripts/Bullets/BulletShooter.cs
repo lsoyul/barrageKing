@@ -40,7 +40,7 @@ public class BulletShooter : MonoBehaviour
 
     public void StopShooting()
     {
-        firing = true;
+        firing = false;
 
         timer = 0;
         curPatternIndex = 0;
