@@ -1,20 +1,16 @@
-﻿using CloudFine;
-using SGoap;
+﻿using SGoap;
 using UnityEngine;
 
 namespace Habun
 {
     public class EnemyMoveToTarget3D : BasicAction
     {
-        public override bool CanAbort() => TimeElapsed > 2.0f;
-
-        [SerializeField]
-        private SteeringAgent steering;
+        public override bool CanAbort() => AgentData.DistanceToTarget <= moveDistance;
 
         [SerializeField]
         private float moveDistance = 5.0f;
         [SerializeField]
-        private float moveSpeed = 10.0f;
+        private float moveSpeed = 5.0f;
         [SerializeField]
         private float lerpDelta = 2.0f;
 
@@ -25,11 +21,6 @@ namespace Habun
             if (AgentData.DistanceToTarget > moveDistance)
             {
                 AgentData.Position += AgentData.DirectionToTarget * moveSpeed * Time.deltaTime;
-            }
-
-            if (steering)
-            {
-                steering.LockPosition(true);
             }
 
             return CanAbort() ? EActionStatus.Success : EActionStatus.Running;
