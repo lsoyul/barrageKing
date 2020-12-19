@@ -4,6 +4,7 @@ using Pixelplacement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Adohi
@@ -28,16 +29,26 @@ namespace Adohi
         public event Action OnViewChangedEndTo2D;
         public event Action OnViewChangedEndTo3D;
 
+        public event Func<bool> ViewPointChangeConditions;
         // Update is called once per frame
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (!this.isViewChanging)
+                if (ViewPointChangeConditions?.GetInvocationList().Length > 0)
                 {
-                    ChangeViewPointTask();
+                    if (ViewPointChangeConditions.GetInvocationList().All(f => (bool)f.DynamicInvoke()))
+                    {
+
+                        if (!this.isViewChanging)
+                        {
+                            ChangeViewPointTask();
+                        }
+
+                    }
                 }
             }
+
         }
 
         public async UniTask ChangeViewPointTask()
