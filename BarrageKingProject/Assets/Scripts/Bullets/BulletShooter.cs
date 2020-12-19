@@ -5,6 +5,8 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.XR.WSA.Input;
 
+using DigitalRuby.SoundManagerNamespace;
+
 public class BulletShooter : MonoBehaviour
 {
     bool firing = false;
@@ -60,7 +62,10 @@ public class BulletShooter : MonoBehaviour
             if (timer > patternList[curPatternIndex].delay)
             {
                 if (patternList[curPatternIndex].bulletType != GameStatics.BULLET_TYPE.NONE)
+                {
                     BulletManager.Instance().FireBullet(patternList[curPatternIndex].bulletType, this.transform.position, 5f, patternList[curPatternIndex].speed, patternList[curPatternIndex].acceleration, this.transform.forward);
+                    SoundManager.PlayOneShotSound(SoundContainer.Instance().SoundEffectsDic["sound_fire1"], SoundContainer.Instance().SoundEffectsDic["sound_fire1"].clip);
+                }
 
                 if (++curPatternIndex >= patternList.Count) curPatternIndex = 0;
 
