@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Habun
 {
-    public class EnemyAttack : BasicAction
+    public class EnemyAttack3D : BasicAction
     {
         [SerializeField]
         private SteeringAgent steering;
