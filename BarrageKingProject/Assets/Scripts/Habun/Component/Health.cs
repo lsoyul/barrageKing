@@ -13,14 +13,6 @@ namespace Habun
         [SerializeField, Space]
         private GameObjectUnityEvent onDeath;
 
-        // PROPERTIES: ---------------------------------------------------------
-
-        public float HP
-        {
-            get { return hp.Value; }
-            set { hp.Value = value; }
-        }
-
         // PUBLIC METHODS: ----------------------------------------------------
 
         public void Damage(float damage)
