@@ -47,6 +47,7 @@ namespace Adohi
                         wall.transform.parent = this.transform;
                         var mapObejct = wall.GetComponent<MapObject>();
                         mapObjects[i, j] = mapObejct;
+                        mapObejct.InitObject();
                     }
 
                     else
@@ -59,6 +60,8 @@ namespace Adohi
                             var mapObejct = obstacle.GetComponent<MapObject>();
                             mapObejct.height = Random.Range(1, 4);
                             mapObjects[i, j] = mapObejct;
+                            mapObejct.InitObject();
+
                         }
                         //Ground
                         else
@@ -67,6 +70,8 @@ namespace Adohi
                             ground.transform.position = new Vector3(i, 0f, j);
                             var mapObejct = ground.GetComponent<MapObject>();
                             mapObjects[i, j] = mapObejct;
+                            mapObejct.InitObject();
+
                         }
                     }
 
@@ -75,8 +80,59 @@ namespace Adohi
             return map;
         }
 
+        public int[,] Spawn(out MapObject[,] mapObjects, int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
+        {
+            var map = new int[mapWidth, mapLength];
+            mapObjects = new MapObject[mapWidth, mapLength];
+            map.Fill(1);
 
-        
+
+            for (int i = 0; i < mapWidth; i++)
+            {
+                for (int j = 0; j < mapLength; j++)
+                {
+                    //outerWall
+                    if (i == 0 || j == 0 || i == mapWidth - 1 || j == mapLength - 1)
+                    {
+                        map[i, j] = 0;
+                        var wall = Instantiate(outerWallPrefab);
+                        wall.transform.position = new Vector3(i, 0f, j);
+                        wall.transform.parent = this.transform;
+                        var mapObejct = wall.GetComponent<MapObject>();
+                        mapObjects[i, j] = mapObejct;
+                        mapObejct.InitObject();
+                    }
+
+                    else
+                    {
+                        //Obstacle
+                        if (Random.Range(0f, 100f) < fillRatio)
+                        {
+                            map[i, j] = 0;
+                            var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 0f, j), Quaternion.identity);
+                            var mapObejct = obstacle.GetComponent<MapObject>();
+                            mapObejct.height = Random.Range(1, 4);
+                            mapObjects[i, j] = mapObejct;
+                            mapObejct.InitObject();
+
+                        }
+                        //Ground
+                        else
+                        {
+                            var ground = Instantiate(groundBlockPrefab);
+                            ground.transform.position = new Vector3(i, 0f, j);
+                            var mapObejct = ground.GetComponent<MapObject>();
+                            mapObjects[i, j] = mapObejct;
+                            mapObejct.InitObject();
+
+                        }
+                    }
+
+                }
+            }
+            return map;
+        }
+
     }
 
 }

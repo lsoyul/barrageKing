@@ -8,10 +8,21 @@ using UnityEngine.VFX;
 
 namespace Adohi
 {
+    public enum MapObjectType
+    {
+        Ground,
+        Wall,
+        Obstacle,
+        Box
+    }
+    
+
+
     public class MapObject : MonoBehaviour
     {
         private Color startColor;
         private Color endColor;
+        public MapObjectType objectType;
         public float timeing = 0.6f;
         public Color defalutColor;
 
@@ -82,6 +93,13 @@ namespace Adohi
             this.object2D.transform.DOScale(0f, 1f).From(1f).SetDelay(Random.Range(0f, 0.5f)).OnComplete(() => this.object2D.SetActive(false));
         }
 
+
+        public void InitObject()
+        {
+            this.revealVFX.enabled = false;
+            this.object3D.SetActive(false);
+            this.object2D.SetActive(false);
+        }
         /*
         public void AddBlock3D()
         {

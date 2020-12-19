@@ -28,8 +28,8 @@ namespace Adohi
         public event Action OnViewChangedMiddleTo3D;
         public event Action OnViewChangedEndTo2D;
         public event Action OnViewChangedEndTo3D;
-
         public event Func<bool> ViewPointChangeConditions;
+
         // Update is called once per frame
         void Update()
         {
@@ -39,12 +39,18 @@ namespace Adohi
                 {
                     if (ViewPointChangeConditions.GetInvocationList().All(f => (bool)f.DynamicInvoke()))
                     {
-
                         if (!this.isViewChanging)
                         {
                             ChangeViewPointTask();
                         }
 
+                    }
+                }
+                else
+                {
+                    if (!this.isViewChanging)
+                    {
+                        ChangeViewPointTask();
                     }
                 }
             }

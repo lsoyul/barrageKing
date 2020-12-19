@@ -69,6 +69,22 @@ namespace Adohi
             }
         }
 
+        public static Vector3 ToVector(this Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.Up:
+                    return Vector3.forward;
+                case Direction.Down:
+                    return Vector3.back;
+                case Direction.Left:
+                    return Vector3.left;
+                case Direction.Right:
+                    return Vector3.right;
+            }
+            return Vector3.zero;
+        }
+
         public static Quaternion ToRotation(this Direction direction)
         {
             switch (direction)
