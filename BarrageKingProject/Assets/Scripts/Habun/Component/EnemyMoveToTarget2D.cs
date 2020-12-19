@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Habun
 {
-    public class EnemyMoveToTarget : BasicAction
+    public class EnemyMoveToTarget2D : BasicAction
     {
         public override bool CanAbort() => TimeElapsed > 2.0f;
 
