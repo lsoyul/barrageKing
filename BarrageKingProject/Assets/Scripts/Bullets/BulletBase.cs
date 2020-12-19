@@ -150,20 +150,36 @@ public class BulletBase : MonoBehaviour
                 || Vector3.Distance(this.gameObject.transform.position, this.initPosition) > maxLivingDistance)
             {
                 // if (living time over) or (far away from max distance) than return to datapool
-                isFire = false;
 
-                if (trailRenderer != null && trailRenderer.Count > 0)
-                {
-                    foreach (var trailer in trailRenderer)
-                    {
-                        trailer.Clear();
-                    }
-                }
-                    
-
-                if (onDestroy != null) onDestroy(this);
+                OnDestroyBullet();
             }
         }
     }
 
+
+    void OnDestroyBullet()
+    {
+        isFire = false;
+
+        if (ViewPointManager.Instance != null)
+        {
+            ViewPointManager.Instance.OnViewChangedStartTo2D -= OnViewChangedStartTo2D;
+            ViewPointManager.Instance.OnViewChangedStartTo3D -= OnViewChangedStartTo3D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D -= OnViewChangedMiddleTo2D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D -= OnViewChangedMiddleTo3D;
+            ViewPointManager.Instance.OnViewChangedEndTo2D -= OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D -= OnViewChangedEndTo3D;
+
+            if (trailRenderer != null && trailRenderer.Count > 0)
+            {
+                foreach (var trailer in trailRenderer)
+                {
+                    trailer.Clear();
+                }
+            }
+
+
+            if (onDestroy != null) onDestroy(this);
+        }
+    }
 }
