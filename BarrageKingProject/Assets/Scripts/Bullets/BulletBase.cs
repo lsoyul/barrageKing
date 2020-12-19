@@ -59,17 +59,21 @@ public class BulletBase : MonoBehaviour
 
         this.isFire = true;
 
-        ViewPointManager.Instance.OnViewChangedStartTo2D += OnViewChangedStartTo2D;
-        ViewPointManager.Instance.OnViewChangedStartTo3D += OnViewChangedStartTo3D;
-        ViewPointManager.Instance.OnViewChangedMiddleTo2D += OnViewChangedMiddleTo2D;
-        ViewPointManager.Instance.OnViewChangedMiddleTo3D += OnViewChangedMiddleTo3D;
-        ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
-        ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
+        if (ViewPointManager.Instance != null)
+        {
+            ViewPointManager.Instance.OnViewChangedStartTo2D += OnViewChangedStartTo2D;
+            ViewPointManager.Instance.OnViewChangedStartTo3D += OnViewChangedStartTo3D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D += OnViewChangedMiddleTo2D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D += OnViewChangedMiddleTo3D;
+            ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
+
+            SetObjectDimensional();
+        }
 
         viewChange2dEffect.gameObject.SetActive(false);
         viewChange3dEffect.gameObject.SetActive(false);
 
-        SetObjectDimensional();
     }
 
     void SetObjectDimensional()

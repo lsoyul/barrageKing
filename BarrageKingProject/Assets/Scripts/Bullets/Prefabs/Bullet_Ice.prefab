@@ -4829,7 +4829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2083172176650307498
 Transform:
   m_ObjectHideFlags: 0
@@ -24333,7 +24333,6 @@ GameObject:
   - component: {fileID: 2112627797667833410}
   - component: {fileID: 2270858822627910770}
   - component: {fileID: 2271045683838227132}
-  - component: {fileID: 2077293952226412838}
   m_Layer: 0
   m_Name: 3d
   m_TagString: Untagged
@@ -29207,22 +29206,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2077293952226412838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109334197021895834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa5c1e37409a9344a344c0468db383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSound: {fileID: 1297775994297274, guid: 4c41838ab83801b40a6c32d55f29c98b, type: 3}
-  destroyWhenDone: 1
-  soundPrefabIsChild: 0
-  pitchRandomMultiplier: 1.1
 --- !u!1 &2452500483078082906
 GameObject:
   m_ObjectHideFlags: 0
@@ -39306,7 +39289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8825696451679905394
 Transform:
   m_ObjectHideFlags: 0
