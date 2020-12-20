@@ -28,6 +28,7 @@ namespace Adohi
             ViewPointManager.Instance.OnViewChangedStartTo2D += To2DStart;
             ViewPointManager.Instance.OnViewChangedEndTo2D += To2DEnd;
             ViewPointManager.Instance.OnViewChangedStartTo3D += To3DStart;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D += To3DMiddle;
             ViewPointManager.Instance.OnViewChangedEndTo3D += To3DEnd;
         }
         public void Construct2D(Location location)
@@ -47,12 +48,18 @@ namespace Adohi
         {
             cancellationTokenSource?.Cancel();
             model3D.gameObject.SetActive(false);
+        }
+
+        public void T2DMiddle()
+        {
+            model2D.gameObject.SetActive(true);
+
             this.location = new Location(this.transform.position.x.RoundToInt(), this.transform.position.z.RoundToInt(), 0);
+            this.transform.position = location.ToVector();
         }
 
         public void To2DEnd()
         {
-            model3D.gameObject.SetActive(true);
             if (this.remainPower > 0f && this.remainDuration > 0f)
             {
                 var direction = pushingDirection3D.ToDirection();
@@ -62,14 +69,26 @@ namespace Adohi
 
         public void To3DStart()
         {
+            "3d log".Log();
             cancellationTokenSource?.Cancel();
             model2D.gameObject.SetActive(false);
             this.transform.position = this.location.ToVector();
         }
 
+        public void To3DMiddle()
+        {
+            model3D.gameObject.SetActive(true);
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
+            var isHit = Physics.Raycast(this.location.ToVector() + Vector3.up * 100f, Vector3.down, out var hitinfo, 200f, layerMask);
+            if (isHit)
+            {
+                var height = hitinfo.point.y;
+                this.transform.position = this.location.ToVector() + Vector3.up * (height + 0.5f);
+            }
+        }
+
         public void To3DEnd()
         {
-            model2D.gameObject.SetActive(true);
             if (this.remainPower > 0f && this.remainDuration > 0f)
             {
                 var direction = pushingDirection2D.ToVector();

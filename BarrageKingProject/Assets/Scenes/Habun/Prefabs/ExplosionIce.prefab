@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3938633084369494378}
   - component: {fileID: 3938633084369494379}
   - component: {fileID: 3777373190300825650}
-  - component: {fileID: 3938633084369494373}
+  - component: {fileID: -4703611567747471200}
   m_Layer: 0
   m_Name: ExplosionIce
   m_TagString: Untagged
@@ -4847,7 +4847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     _usage: 0
-    _value: 10
+    _value: 50
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -4935,7 +4935,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &3938633084369494373
+--- !u!114 &-4703611567747471200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4955,7 +4955,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   duration:
     _usage: 0
-    _value: -1
+    _value: 1
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

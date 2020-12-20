@@ -17,12 +17,15 @@ namespace Adohi
         {
             await MapManager.Instance.GenerateMap();
             await CharacterManager.Instance.GenerateCharacter();
+
             await StartGameTask();
         }
 
         private async UniTask StartGameTask()
         {
+
             OnStartGame?.Invoke();
+
         }
     }
 

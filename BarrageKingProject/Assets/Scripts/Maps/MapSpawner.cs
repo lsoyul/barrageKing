@@ -17,6 +17,7 @@ namespace Adohi
         public int mapWidth = 22;
         public int mapLength = 22;
         public float fillRatio = 10f;
+        public string seed = "10";
 
         [Header("Obstacle setting")]
         public int minObstacleHeight;
@@ -25,6 +26,7 @@ namespace Adohi
 
         public async UniTask<int[,]> Spawn(int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
         {
+            System.Random prng = new System.Random(seed.GetHashCode());
             this.transform.DestroyChildrenImmediate();
             var map = new int[mapWidth, mapLength];
             mapObjects = new List<MapObject>();
@@ -58,7 +60,7 @@ namespace Adohi
 
                         mapObejct.InitObject();
                         //Obstacle
-                        if (Random.Range(0f, 100f) < fillRatio && (CharacterManager.Instance.initialLocation.X != i && CharacterManager.Instance.initialLocation.Y != j))
+                        if (prng.NextFloat(0f, 100f) < fillRatio && (CharacterManager.Instance.initialLocation.X != i && CharacterManager.Instance.initialLocation.Y != j))
                         {
                             map[i, j] = 0;
                             var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 1f, j), Quaternion.identity);
