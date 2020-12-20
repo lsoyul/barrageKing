@@ -1,10 +1,12 @@
 ﻿using Cysharp.Threading.Tasks.Triggers;
 using System.Collections;
 using System.Collections.Generic;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 public class CollisionManager : MonoSingleton<CollisionManager>
 {
+    public FloatVariable playerHealth;
 
     protected override void OnInitialize()
     {
@@ -37,6 +39,7 @@ public class CollisionManager : MonoSingleton<CollisionManager>
                 {
                     // player damaged
                     float damage = GameStatics.GetBulletDamage(bullet.bulletType);
+                    playerHealth.Value -= damage;
 
                     // remove bullet
                     bullet.OnDestroyBullet();

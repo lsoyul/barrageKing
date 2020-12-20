@@ -35,7 +35,7 @@ namespace Adohi
         public GameObject object3D;
         public Renderer object3DMaterial;
         public VisualEffect revealVFX;
-        public VisualEffect hidedVFX;
+        public VisualEffect hideVFX;
         public float height;
         public int particleCountPerHeight = 200;
         public float growDuration;
@@ -54,6 +54,8 @@ namespace Adohi
             ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => Show2DObject();
             ViewPointManager.Instance.OnViewChangedStartTo3D += () => Hide2DObject();
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => Show3DObject();
+            ViewPointManager.Instance.OnViewChangedEndTo2D += () => EndTo2D();
+            ViewPointManager.Instance.OnViewChangedEndTo3D += () => EndTo3D();
         }
 
         private void Update()
@@ -80,8 +82,7 @@ namespace Adohi
             revealVFX.SetInt("spawnCount", (height * particleCountPerHeight).ToInt());
             revealVFX.SetFloat("height", height);
             revealVFX.SetFloat("spawnDuration", growDuration * timeing);
-            this.revealVFX.enabled = false;
-            this.object3D.SetActive(false);
+            //this.object3D.SetActive(false);
             this.revealVFX.enabled = true;
             this.object3D.SetActive(true);
             this.object3D.transform.DOScaleY(height, growDuration).From(0f);
@@ -90,14 +91,12 @@ namespace Adohi
         [Button]
         public void Hide3DObject()
         {
-            hidedVFX.SetVector4("startColor", endColor);
-            hidedVFX.SetVector4("endColor", startColor);
-            hidedVFX.SetInt("spawnCount", (height * particleCountPerHeight).ToInt());
-            hidedVFX.SetFloat("height", height);
-            hidedVFX.SetFloat("spawnDuration", growDuration * timeing);
-            this.hidedVFX.enabled = false;
-            this.object3D.SetActive(false);
-            this.hidedVFX.enabled = true;
+            hideVFX.SetVector4("startColor", endColor);
+            hideVFX.SetVector4("endColor", startColor);
+            hideVFX.SetInt("spawnCount", (height * particleCountPerHeight).ToInt());
+            hideVFX.SetFloat("height", height);
+            hideVFX.SetFloat("spawnDuration", growDuration * timeing);
+            this.hideVFX.enabled = true;
             this.object3D.SetActive(true);
             this.object3D.transform.DOScaleY(0f, growDuration).From(height).OnComplete(() => this.object3D.SetActive(false));
         }
@@ -122,10 +121,15 @@ namespace Adohi
             this.object3D.SetActive(false);
             this.object2D.SetActive(false);
         }
-        
 
-        public void DoFade3D()
+        public void EndTo2D()
         {
+            this.hideVFX.enabled = false;
+        }
+
+        public void EndTo3D()
+        {
+            this.revealVFX.enabled = false;
 
         }
     }

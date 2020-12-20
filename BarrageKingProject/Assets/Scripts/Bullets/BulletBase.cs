@@ -122,7 +122,7 @@ public class BulletBase : MonoBehaviour
 
     public void OnViewChangedMiddleTo2D()
     {
-        object_2d.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+        object_2d.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
         object_2d.SetActive(true);
         object_3d.SetActive(false);
 
