@@ -83,7 +83,8 @@ public class BulletBase : MonoBehaviour
 
         this.isFire = true;
 
-        
+        object_2d.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
+
         viewChange2dEffect.gameObject.SetActive(false);
         viewChange3dEffect.gameObject.SetActive(false);
 
