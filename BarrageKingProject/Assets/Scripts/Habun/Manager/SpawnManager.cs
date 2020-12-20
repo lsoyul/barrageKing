@@ -23,8 +23,6 @@ namespace Habun
         [Header("Spawn Settings")]
         [SerializeField]
         private GameObjectValueList spawnObjects;
-        [SerializeField]
-        private GameObjectValueList spawnPositions;
 
         [Header("Wave Settings")]
         [SerializeField]
@@ -65,32 +63,19 @@ namespace Habun
             {
                 for (var i = 0; i < wave.spawnCount; i++)
                 {
-                    if (spawnPositions != null && spawnPositions.Count > 0)
-                    {
-                        var randomIndex = Random.Range(0, spawnPositions.Count);
-                        var randomPosition = spawnPositions.Get(randomIndex).transform.position;
-                        var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
-                        var instance = PoolManager.Instance.Pick(wave.prefab);
-                        instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
-                    }
-                    else
-                    {
-                        while (true)
-                        {
-                            var centerPoint = new Location(MapManager.Instance.mapWidth / 2, MapManager.Instance.mapLength / 2).ToVector();
-                            var randomRadius = Random.Range(wave.minRadius, wave.maxRadius);
-                            var randomPoint = Random.insideUnitCircle * randomRadius;
-                            var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
-                            var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
+                    var centerPoint = new Location(MapManager.Instance.mapWidth / 2, MapManager.Instance.mapLength / 2).ToVector();
+                    var randomRadius = Random.Range(wave.minRadius, wave.maxRadius);
+                    var randomPoint = Random.insideUnitCircle * randomRadius;
+                    var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
+                    var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
 
-                            if (MapManager.Instance.IsAvailableLocation(new Location(randomPosition.x.RoundToInt(), randomPosition.z.RoundToInt())))
-                            {
-                                var instance = PoolManager.Instance.Pick(wave.prefab);
-                                instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
-                                break;
-                            }
-                        }
+                    if (!MapManager.Instance.IsAvailableLocation(new Location(randomPosition.x.RoundToInt(), randomPosition.z.RoundToInt())))
+                    {
+                        continue;
                     }
+
+                    var instance = PoolManager.Instance.Pick(wave.prefab);
+                    instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
 
                     yield return new WaitForSeconds(wave.spawnInterval);
                 }

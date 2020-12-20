@@ -15,17 +15,17 @@ namespace Habun
 
         private void Start()
         {
-            observer.Value = gameObject;
+            if (observer != null) observer.Value = gameObject;
         }
 
         private void OnEnable()
         {
-            observerList.Add(gameObject);
+            if (observerList != null) observerList.Add(gameObject);
         }
 
         private void OnDisable()
         {
-            observerList.Remove(gameObject);
+            if (observerList != null) observerList.Remove(gameObject);
         }
 
     }
