@@ -54,7 +54,15 @@ public class BulletBase : MonoBehaviour
         this.acceleration = acceleration;
 
         Vector3 lookAtPoint = this.transform.position;
-        lookAtPoint += direction.normalized;
+        Vector3 directionVec = Vector3.zero;
+        directionVec = direction.normalized;
+
+        if (ViewPointManager.Instance.currentViewPoint == ViewPoint.twoDimensional)
+        {
+            directionVec.y = 0;
+        }
+
+        lookAtPoint += directionVec;
 
         this.transform.LookAt(lookAtPoint);
 
