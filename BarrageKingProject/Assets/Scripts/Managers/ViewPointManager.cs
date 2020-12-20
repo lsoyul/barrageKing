@@ -16,12 +16,8 @@ namespace Adohi
     }
 
     public class ViewPointManager : Singleton<ViewPointManager>
-    {
-        public bool isViewChanging;
-
-        public ViewPoint currentViewPoint = ViewPoint.twoDimensional;
-        public float firstViewChangeDuration = 1f;
-        public float secondViewChangeDuration = 1f;
+    {       
+        //events
         public event Action OnViewChangedStartTo2D;
         public event Action OnViewChangedStartTo3D;
         public event Action OnViewChangedMiddleTo2D;
@@ -30,6 +26,13 @@ namespace Adohi
         public event Action OnViewChangedEndTo3D;
         public event Func<bool> ViewPointChangeConditions;
 
+        [Header("View Change Duration")]
+        public float firstViewChangeDuration = 1f;
+        public float secondViewChangeDuration = 1f;
+
+        [Header("Current State")]
+        public bool isViewChanging;
+        public ViewPoint currentViewPoint = ViewPoint.twoDimensional;
         // Update is called once per frame
         void Update()
         {

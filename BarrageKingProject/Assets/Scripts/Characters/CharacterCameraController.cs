@@ -28,15 +28,19 @@ namespace Adohi
 
         private void LateUpdate()
         {
-            switch (ViewPointManager.Instance.currentViewPoint)
+            if (target != null)
             {
-                case ViewPoint.twoDimensional:
-                    Follow2D();
-                    break;
-                case ViewPoint.threeDimensional:
-                    Follow3D();
-                    break;
+                switch (ViewPointManager.Instance.currentViewPoint)
+                {
+                    case ViewPoint.twoDimensional:
+                        Follow2D();
+                        break;
+                    case ViewPoint.threeDimensional:
+                        Follow3D();
+                        break;
+                }
             }
+
         }
 
         public void Follow2D()

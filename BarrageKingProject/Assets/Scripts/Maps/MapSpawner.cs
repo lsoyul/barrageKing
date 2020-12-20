@@ -1,4 +1,5 @@
-﻿using PD.UnityEngineExtensions;
+﻿using Cysharp.Threading.Tasks;
+using PD.UnityEngineExtensions;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,13 +23,9 @@ namespace Adohi
         public int maxObstacleHeight;
 
 
-        [Header("Objects")]
-        public MapObject[,] mapObjects;
-
-
-        [Button]
-        public int[,] Spawn(int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
+        public async UniTask<int[,]> Spawn(MapObject[,] mapObjects, int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
         {
+            this.transform.DestroyChildrenImmediate();
             var map = new int[mapWidth, mapLength];
             mapObjects = new MapObject[mapWidth, mapLength];
             map.Fill(1);
@@ -53,10 +50,11 @@ namespace Adohi
                     else
                     {
                         //Obstacle
-                        if (Random.Range(0f, 100f) < fillRatio)
+                        if (Random.Range(0f, 100f) < fillRatio && (CharacterManager.Instance.initialLocation.X != i && CharacterManager.Instance.initialLocation.Y != j))
                         {
                             map[i, j] = 0;
                             var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 0f, j), Quaternion.identity);
+                            obstacle.transform.parent = this.transform;
                             var mapObejct = obstacle.GetComponent<MapObject>();
                             mapObejct.height = Random.Range(1, 4);
                             mapObjects[i, j] = mapObejct;
@@ -68,59 +66,7 @@ namespace Adohi
                         {
                             var ground = Instantiate(groundBlockPrefab);
                             ground.transform.position = new Vector3(i, 0f, j);
-                            var mapObejct = ground.GetComponent<MapObject>();
-                            mapObjects[i, j] = mapObejct;
-                            mapObejct.InitObject();
-
-                        }
-                    }
-
-                }
-            }
-            return map;
-        }
-
-        public int[,] Spawn(out MapObject[,] mapObjects, int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
-        {
-            var map = new int[mapWidth, mapLength];
-            mapObjects = new MapObject[mapWidth, mapLength];
-            map.Fill(1);
-
-
-            for (int i = 0; i < mapWidth; i++)
-            {
-                for (int j = 0; j < mapLength; j++)
-                {
-                    //outerWall
-                    if (i == 0 || j == 0 || i == mapWidth - 1 || j == mapLength - 1)
-                    {
-                        map[i, j] = 0;
-                        var wall = Instantiate(outerWallPrefab);
-                        wall.transform.position = new Vector3(i, 0f, j);
-                        wall.transform.parent = this.transform;
-                        var mapObejct = wall.GetComponent<MapObject>();
-                        mapObjects[i, j] = mapObejct;
-                        mapObejct.InitObject();
-                    }
-
-                    else
-                    {
-                        //Obstacle
-                        if (Random.Range(0f, 100f) < fillRatio)
-                        {
-                            map[i, j] = 0;
-                            var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 0f, j), Quaternion.identity);
-                            var mapObejct = obstacle.GetComponent<MapObject>();
-                            mapObejct.height = Random.Range(1, 4);
-                            mapObjects[i, j] = mapObejct;
-                            mapObejct.InitObject();
-
-                        }
-                        //Ground
-                        else
-                        {
-                            var ground = Instantiate(groundBlockPrefab);
-                            ground.transform.position = new Vector3(i, 0f, j);
+                            ground.transform.parent = this.transform;
                             var mapObejct = ground.GetComponent<MapObject>();
                             mapObjects[i, j] = mapObejct;
                             mapObejct.InitObject();
