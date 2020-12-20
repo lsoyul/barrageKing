@@ -487,14 +487,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goals:
-  - KeyReference: {fileID: 11400000, guid: 5ace444dc288bc04abd2e9987a1f11ba, type: 2}
-    Concatenator: {fileID: 0}
-    StateType: 0
-    Value: 0
-    StringValue: 
-    Operator: 0
-    Priority: 1
-    Once: 0
   - KeyReference: {fileID: 11400000, guid: 8c58deb410c44cc46bcd304280b29ce7, type: 2}
     Concatenator: {fileID: 0}
     StateType: 0
@@ -563,7 +555,19 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4658880425594739995}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &630366699655943088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,7 +879,6 @@ MonoBehaviour:
   sensor: {fileID: 4658880426012042352}
   patrols: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
   moveTarget: {fileID: 0}
-  moveSpeed: 4
   moveTime: 0.5
   timer: 0
 --- !u!1 &4894062222948408484

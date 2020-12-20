@@ -4853,7 +4853,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8192
   onHit:
     m_PersistentCalls:
       m_Calls:

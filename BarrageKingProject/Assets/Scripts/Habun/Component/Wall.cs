@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Adohi;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
@@ -45,7 +46,8 @@ namespace Habun
                 instance.transform.SetPositionAndRotation(transform.position, transform.rotation);
             }
 
-            gameObject.SetActive(false);
+            MapManager.Instance.RemoveBox(GetComponent<Box>());
+            Destroy(gameObject);
         }
 
         // PRIVATE METHODS: ----------------------------------------------------

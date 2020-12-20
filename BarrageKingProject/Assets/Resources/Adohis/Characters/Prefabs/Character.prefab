@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 909296911}
   - component: {fileID: 2774709654959188528}
   - component: {fileID: 8643421197903532386}
+  - component: {fileID: 6392491242767245394}
+  - component: {fileID: 8602811151594735429}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -243,6 +245,52 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth:
     value: 0
+--- !u!114 &6392491242767245394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589056131566756072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1067564b3c709d94bba5ed15389c1019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 44134742773d4e3469874ff67813be70, type: 2}
+    _variableInstancer: {fileID: 0}
+  maxHp:
+    _usage: 0
+    _value: 100
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8602811151594735429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589056131566756072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observer:
+    _usage: 2
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 1d1b530358c063b45860146f64781af3, type: 2}
+    _variableInstancer: {fileID: 0}
+  observerList: {fileID: 0}
 --- !u!1 &660709627334059455
 GameObject:
   m_ObjectHideFlags: 0
