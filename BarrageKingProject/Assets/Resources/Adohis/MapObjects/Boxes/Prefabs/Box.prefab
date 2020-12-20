@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 6424937440894107209}
   - component: {fileID: 3902126541812186795}
   - component: {fileID: 5754938968856015556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7260859162806359312
 Transform:
   m_ObjectHideFlags: 0
@@ -104,13 +104,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1012954754870266859}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1012954754870266859
 Transform:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3356233953205217896}
   - component: {fileID: 3356233953205217903}
   - component: {fileID: 3356233953205217900}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a6d09d388dd7144b979cf4d816e9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model2D: {fileID: 4757223970595498659}
-  Model3D: {fileID: 770420702822092421}
+  model2D: {fileID: 4757223970595498659}
+  model3D: {fileID: 770420702822092421}
   location:
     X: 0
     Y: 0
@@ -203,13 +203,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2080857980471044314}
   - component: {fileID: 4757223970595498659}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2080857980471044314
 Transform:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8399449462077954275, guid: 8ce3db794e2026243b8fa584ba32da78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645619696392155103}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

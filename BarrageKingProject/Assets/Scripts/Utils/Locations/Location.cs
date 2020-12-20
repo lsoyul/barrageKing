@@ -1187,6 +1187,12 @@ namespace Adohi
         public bool Equals(Location location)
             => (this.X, this.Y, this.Z) == (location.X, location.Y, location.Z);
 
+        public bool Equals(int x, int y)
+            => (this.X, this.Y) == (x, y);
+
+        public bool Equals(int x, int y, int z)
+            => (this.X, this.Y, this.Z) == (x, y, z);
+
         public override int GetHashCode()
         {
             var hashCode = 373119288;

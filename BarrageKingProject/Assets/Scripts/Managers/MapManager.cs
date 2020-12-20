@@ -19,18 +19,14 @@ namespace Adohi
         public float fillRatio;
 
         public int[,] map2D;
-        public MapObject[,] mapObjects;
+        public List<MapObject> mapObjects { get => spawner.mapObjects; }
 
         public List<Box> boxes;
 
         public async UniTask GenerateMap()
         {
-            map2D = await spawner.Spawn(mapObjects, mapWidth, mapLength, fillRatio);
-            "1".Log();
-            mapObjects.Length.Log();
+            map2D = await spawner.Spawn(mapWidth, mapLength, fillRatio);
             mapObjects.ForEach(m => m.Show2DObject());
-            "2".Log();
-
         }
 
 
@@ -47,6 +43,19 @@ namespace Adohi
         public Box GetBox(Location location)
         {
             return boxes.Where(b => b.location.Equals(location)).FirstOrDefault();
+        }
+
+        public bool IsAvailableLocation(Location location)
+        {
+            return IsAvailableLocation(location.X, location.Y);
+        }
+
+        public bool IsAvailableLocation(int x, int y)
+        {
+            boxes.ForEach(b => b.location.Log());
+            var isBoxExist = boxes.Any(b => b.location.Equals(x, y));
+            var isObstacle = map2D[x, y] == 0;
+            return !(isBoxExist || isObstacle);
         }
     }
 

@@ -37,7 +37,7 @@ public class BulletBase : MonoBehaviour
 
     public Action<BulletBase> onDestroy;
 
-    public Action<GameObject, Collision> onCollision;
+    public Action<GameObject, Collider> onCollision;
     bool isCheckCollide = true;
 
     public Vector3 GetDirection()
@@ -57,9 +57,21 @@ public class BulletBase : MonoBehaviour
         Vector3 directionVec = Vector3.zero;
         directionVec = direction.normalized;
 
-        if (ViewPointManager.Instance.currentViewPoint == ViewPoint.twoDimensional)
+        if (ViewPointManager.Instance != null)
         {
-            directionVec.y = 0;
+            ViewPointManager.Instance.OnViewChangedStartTo2D += OnViewChangedStartTo2D;
+            ViewPointManager.Instance.OnViewChangedStartTo3D += OnViewChangedStartTo3D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D += OnViewChangedMiddleTo2D;
+            ViewPointManager.Instance.OnViewChangedMiddleTo3D += OnViewChangedMiddleTo3D;
+            ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
+
+            SetObjectDimensional();
+
+            if (ViewPointManager.Instance.currentViewPoint == ViewPoint.twoDimensional)
+            {
+                directionVec.y = 0;
+            }
         }
 
         lookAtPoint += directionVec;
@@ -72,17 +84,6 @@ public class BulletBase : MonoBehaviour
 
         this.isFire = true;
 
-        if (ViewPointManager.Instance != null)
-        {
-            ViewPointManager.Instance.OnViewChangedStartTo2D += OnViewChangedStartTo2D;
-            ViewPointManager.Instance.OnViewChangedStartTo3D += OnViewChangedStartTo3D;
-            ViewPointManager.Instance.OnViewChangedMiddleTo2D += OnViewChangedMiddleTo2D;
-            ViewPointManager.Instance.OnViewChangedMiddleTo3D += OnViewChangedMiddleTo3D;
-            ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
-            ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
-
-            SetObjectDimensional();
-        }
         
         viewChange2dEffect.gameObject.SetActive(false);
         viewChange3dEffect.gameObject.SetActive(false);
@@ -171,7 +172,7 @@ public class BulletBase : MonoBehaviour
             }
             else
             {
-              curTimer += Time.deltaTime;
+            curTimer += Time.deltaTime;
             }
 
             if (curTimer > maxLivingDuration
@@ -217,10 +218,11 @@ public class BulletBase : MonoBehaviour
         this.isCheckCollide = isCheck;
     }
 
-    private void OnCollisionStay(Collision collision)
+
+    private void OnTriggerStay(Collider other)
     {
         if (isCheckCollide)
-            onCollision?.Invoke(this.gameObject, collision);
+            onCollision?.Invoke(this.gameObject, other);
     }
 
 }

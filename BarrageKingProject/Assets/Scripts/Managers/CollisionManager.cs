@@ -14,7 +14,7 @@ public class CollisionManager : MonoSingleton<CollisionManager>
 
     }
 
-    public void OnCollideWithObject(GameObject detectedObj, Collision targetObj)
+    public void OnCollideWithObject(GameObject detectedObj, Collider targetObj)
     {
         if (detectedObj.CompareTag("Bullet"))
         {

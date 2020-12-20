@@ -34,9 +34,12 @@ namespace Adohi
         [Header("PushSetting")]
         public KeyCode pushstructKey = KeyCode.Mouse1;
 
-
-
         public int CurrentBoxCount { get => MapManager.Instance.boxes.Count; }
+
+        private void Awake()
+        {
+            this.character = GetComponent<Character>();
+        }
 
         private void Start()
         {
@@ -57,7 +60,7 @@ namespace Adohi
                         break;
                 }
 
-                if (Input.GetKeyDown(constructKey))
+                if (Input.GetKeyDown(pushstructKey))
                 {
                     if (lockOnBox != null)
                     {
@@ -78,6 +81,7 @@ namespace Adohi
             {
                 if (ConstuctAvailable())
                 {
+                    "Construct".Log();
                     switch (ViewPointManager.Instance.currentViewPoint)
                     {
                         case ViewPoint.twoDimensional:
@@ -96,11 +100,11 @@ namespace Adohi
             isConstructing = true;
             await UniTask.Delay((duration * 1000).ToInt());
             var targetLocation = characterLocation + direction;
-            if (MapManager.Instance.map2D[targetLocation.X, targetLocation.Y] == 1)
+            if (MapManager.Instance.IsAvailableLocation(targetLocation))
             {
                 var constructedBox = Instantiate(boxPrefab);
                 constructedBox.Construct2D(targetLocation);
-                MapManager.Instance.AddBox(boxPrefab);
+                MapManager.Instance.AddBox(constructedBox);
             }
             isConstructing = false;
         }
@@ -109,13 +113,14 @@ namespace Adohi
         {
             isConstructing = true;
             await Jump(this.jumpHeight, duration);
-            var point = RaycastUtil.RaycastPoint(this.transform.position, Vector3.down, LayerMask.NameToLayer("Ground"), out var isHit);
-            if (isHit)
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            if (Physics.Raycast(this.transform.position + jumpHeight * Vector3.up, Vector3.down, out var hitinfo, 100f, layerMask))
             {
-                var targetPosition = point + 0.5f * Vector3.up;
+                "Ground Hit".Log();
+                var targetPosition = hitinfo.point + 0.5f * Vector3.up;
                 var constructedBox = Instantiate(boxPrefab);
                 constructedBox.Construct3D(targetPosition);
-                MapManager.Instance.AddBox(boxPrefab);
+                MapManager.Instance.AddBox(constructedBox);
             }
             isConstructing = false;
         }
@@ -128,7 +133,10 @@ namespace Adohi
 
         void LockOn2D(Location characterLocation, Direction direction)
         {
+            //"lockon2d".Log();
             var targetLocation = characterLocation + direction;
+            //"targetLocation".Log();
+
             var box = MapManager.Instance.GetBox(targetLocation);
             if (box != null && !box.IsPushing)
             {
@@ -136,6 +144,8 @@ namespace Adohi
             }
             else if (box == null)
             {
+                //"box is null".Log();
+
                 this.lockOnBox = null;
             }
         }
@@ -173,7 +183,7 @@ namespace Adohi
                 case ViewPoint.twoDimensional:
                     return !ViewPointManager.Instance.isViewChanging && !character.characterController.isMoving2D && !this.isConstructing;
                 case ViewPoint.threeDimensional:
-                    return !ViewPointManager.Instance.isViewChanging && !character.characterController.isGround3D && !this.isConstructing;
+                    return !ViewPointManager.Instance.isViewChanging && character.characterController.isGround3D && !this.isConstructing;
             }
             return false;
         }
@@ -185,7 +195,7 @@ namespace Adohi
                 case ViewPoint.twoDimensional:
                     return !ViewPointManager.Instance.isViewChanging && !character.characterController.isMoving2D && !this.isConstructing;
                 case ViewPoint.threeDimensional:
-                    return !ViewPointManager.Instance.isViewChanging && !character.characterController.isGround3D && !this.isConstructing;
+                    return !ViewPointManager.Instance.isViewChanging && character.characterController.isGround3D && !this.isConstructing;
             }
             return false;
         }
