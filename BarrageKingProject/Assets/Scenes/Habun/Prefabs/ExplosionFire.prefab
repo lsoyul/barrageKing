@@ -19502,7 +19502,7 @@ GameObject:
   - component: {fileID: 157323663519557521}
   - component: {fileID: 157323663519557522}
   - component: {fileID: 67339850649037561}
-  - component: {fileID: 157323663519557520}
+  - component: {fileID: 2448046241814135848}
   m_Layer: 0
   m_Name: ExplosionFire
   m_TagString: Untagged
@@ -24336,7 +24336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     _usage: 0
-    _value: 10
+    _value: 50
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -24424,7 +24424,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &157323663519557520
+--- !u!114 &2448046241814135848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24444,7 +24444,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   duration:
     _usage: 0
-    _value: -1
+    _value: 1
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

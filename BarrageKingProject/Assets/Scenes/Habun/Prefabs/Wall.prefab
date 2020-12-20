@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2697335524386621974}
   - component: {fileID: 522556144}
   - component: {fileID: 522556143}
+  - component: {fileID: 4376539438064331430}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -316,7 +317,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   maxHp:
     _usage: 0
-    _value: 0
+    _value: 100
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -335,3 +336,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4376539438064331430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697335524386621975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09569e8d8e6b84aba852e6dcbe52d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initCount:
+    _usage: 0
+    _value: 5
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  duration:
+    _usage: 0
+    _value: -1
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}

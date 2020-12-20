@@ -19926,6 +19926,9 @@ GameObject:
   - component: {fileID: 7357164469217595912}
   - component: {fileID: 7357164469217595913}
   - component: {fileID: 5258083582017554545}
+  - component: {fileID: 5263480455203665890}
+  - component: {fileID: 2729500972770959899}
+  - component: {fileID: -7718648309503714572}
   m_Layer: 0
   m_Name: EnemySpikyStone
   m_TagString: Untagged
@@ -19990,6 +19993,76 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5263480455203665890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357164469217595915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1067564b3c709d94bba5ed15389c1019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp:
+    _usage: 0
+    _value: 50
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  maxHp:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2729500972770959899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357164469217595915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observer:
+    _usage: 0
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  observerList: {fileID: 11400000, guid: a06307a8173ee034288e7fd495ef787b, type: 2}
+--- !u!114 &-7718648309503714572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357164469217595915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09569e8d8e6b84aba852e6dcbe52d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initCount:
+    _usage: 0
+    _value: 5
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  duration:
+    _usage: 0
+    _value: -1
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &7357164469274548432
 GameObject:
   m_ObjectHideFlags: 0

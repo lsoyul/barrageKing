@@ -418,6 +418,9 @@ GameObject:
   - component: {fileID: 97952575885333585}
   - component: {fileID: 97952575885333584}
   - component: {fileID: 97952575885333587}
+  - component: {fileID: 5737622076573686292}
+  - component: {fileID: -5799182412935447607}
+  - component: {fileID: 3016058777119907569}
   m_Layer: 0
   m_Name: EnemyHoleFire
   m_TagString: Untagged
@@ -498,6 +501,76 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5737622076573686292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97952575885333586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1067564b3c709d94bba5ed15389c1019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp:
+    _usage: 0
+    _value: 50
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  maxHp:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-5799182412935447607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97952575885333586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observer:
+    _usage: 0
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  observerList: {fileID: 11400000, guid: a06307a8173ee034288e7fd495ef787b, type: 2}
+--- !u!114 &3016058777119907569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97952575885333586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09569e8d8e6b84aba852e6dcbe52d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initCount:
+    _usage: 0
+    _value: 5
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  duration:
+    _usage: 0
+    _value: -1
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &218629217963463247
 GameObject:
   m_ObjectHideFlags: 0
