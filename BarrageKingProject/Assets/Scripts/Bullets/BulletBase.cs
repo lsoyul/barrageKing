@@ -6,6 +6,7 @@ using UnityEditor.Rendering;
 using NUnit.Framework.Constraints;
 using Adohi;
 using Sirenix.OdinInspector.Editor;
+using MoreLinq.Extensions;
 
 public class BulletBase : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class BulletBase : MonoBehaviour
     [SerializeField] private Vector3 initPosition = Vector3.zero;
 
     public Action<BulletBase> onDestroy;
+
+    public Action<GameObject, Collision> onCollision;
+    bool isCheckCollide = true;
 
     public Vector3 GetDirection()
     {
@@ -71,10 +75,11 @@ public class BulletBase : MonoBehaviour
 
             SetObjectDimensional();
         }
-
+        
         viewChange2dEffect.gameObject.SetActive(false);
         viewChange3dEffect.gameObject.SetActive(false);
 
+        isCheckCollide = true;
     }
 
     void SetObjectDimensional()
@@ -158,7 +163,7 @@ public class BulletBase : MonoBehaviour
             }
             else
             {
-                curTimer += Time.deltaTime;
+              curTimer += Time.deltaTime;
             }
 
             if (curTimer > maxLivingDuration
@@ -172,9 +177,10 @@ public class BulletBase : MonoBehaviour
     }
 
 
-    void OnDestroyBullet()
+    public void OnDestroyBullet()
     {
         isFire = false;
+        isCheckCollide = false;
 
         if (ViewPointManager.Instance != null)
         {
@@ -197,4 +203,16 @@ public class BulletBase : MonoBehaviour
             if (onDestroy != null) onDestroy(this);
         }
     }
+
+    public void SetIsCheckCollide(bool isCheck)
+    {
+        this.isCheckCollide = isCheck;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (isCheckCollide)
+            onCollision?.Invoke(this.gameObject, collision);
+    }
+
 }

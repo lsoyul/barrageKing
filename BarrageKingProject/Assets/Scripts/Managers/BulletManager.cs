@@ -72,7 +72,10 @@ public class BulletManager : MonoBehaviour
                 for (int i = 0; i < item.bulletPoolCount; i++)
                 {
                     GameObject createdGo = Instantiate(go);
-                    createdGo.GetComponent<BulletBase>().onDestroy = OnDestroyBullet;
+                    BulletBase bulletBase = createdGo.GetComponent<BulletBase>();
+                    bulletBase.onDestroy = OnDestroyBullet;
+                    bulletBase.onCollision = CollisionManager.Instance.OnCollideWithObject;
+
                     createdGo.SetActive(false);
 
                     createdGo.transform.parent = bulletRoot.transform;
@@ -135,7 +138,9 @@ public class BulletManager : MonoBehaviour
             if (item.bulletType == bulletType)
             {
                 GameObject go = Instantiate(item.prefab);
-                go.GetComponent<BulletBase>().onDestroy = OnDestroyBullet;
+                BulletBase bulletBase = go.GetComponent<BulletBase>();
+                bulletBase.onDestroy = OnDestroyBullet;
+                bulletBase.onCollision = CollisionManager.Instance.OnCollideWithObject;
 
                 return go;
             }
