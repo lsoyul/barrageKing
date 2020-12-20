@@ -8,6 +8,7 @@ namespace Adohi
     {
         private Camera camera;
         private float currentDistance3D;
+        private List<GameObject> obstacles;
         public Character target;
 
 

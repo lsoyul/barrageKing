@@ -21,13 +21,13 @@ namespace Adohi
         [Header("Obstacle setting")]
         public int minObstacleHeight;
         public int maxObstacleHeight;
+        public List<MapObject> mapObjects;
 
-
-        public async UniTask<int[,]> Spawn(MapObject[,] mapObjects, int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
+        public async UniTask<int[,]> Spawn(int mapWidth = 22, int mapLength = 22, float fillRatio = 10f)
         {
             this.transform.DestroyChildrenImmediate();
             var map = new int[mapWidth, mapLength];
-            mapObjects = new MapObject[mapWidth, mapLength];
+            mapObjects = new List<MapObject>();
             map.Fill(1);
 
 
@@ -40,42 +40,40 @@ namespace Adohi
                     {
                         map[i, j] = 0;
                         var wall = Instantiate(outerWallPrefab);
-                        wall.transform.position = new Vector3(i, 0f, j);
+                        wall.transform.position = new Vector3(i, 1f, j);
                         wall.transform.parent = this.transform;
                         var mapObejct = wall.GetComponent<MapObject>();
-                        mapObjects[i, j] = mapObejct;
+                        mapObjects.Add(mapObejct);
                         mapObejct.InitObject();
                     }
 
                     else
                     {
+                        var ground = Instantiate(groundBlockPrefab);
+                        ground.transform.position = new Vector3(i, 0f, j);
+                        ground.transform.parent = this.transform;
+                        var mapObejct = ground.GetComponent<MapObject>();
+                        mapObjects.Add(mapObejct);
+
+
+                        mapObejct.InitObject();
                         //Obstacle
                         if (Random.Range(0f, 100f) < fillRatio && (CharacterManager.Instance.initialLocation.X != i && CharacterManager.Instance.initialLocation.Y != j))
                         {
                             map[i, j] = 0;
-                            var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 0f, j), Quaternion.identity);
+                            var obstacle = Instantiate(obstaclePrefab, new Vector3(i, 1f, j), Quaternion.identity);
                             obstacle.transform.parent = this.transform;
-                            var mapObejct = obstacle.GetComponent<MapObject>();
-                            mapObejct.height = Random.Range(1, 4);
-                            mapObjects[i, j] = mapObejct;
-                            mapObejct.InitObject();
-
-                        }
-                        //Ground
-                        else
-                        {
-                            var ground = Instantiate(groundBlockPrefab);
-                            ground.transform.position = new Vector3(i, 0f, j);
-                            ground.transform.parent = this.transform;
-                            var mapObejct = ground.GetComponent<MapObject>();
-                            mapObjects[i, j] = mapObejct;
-                            mapObejct.InitObject();
+                            var mapObejcts = obstacle.GetComponent<MapObject>();
+                            mapObejcts.height = Random.Range(1, 4);
+                            mapObjects.Add(mapObejcts);
+                            mapObejcts.InitObject();
 
                         }
                     }
 
                 }
             }
+            "Map Spawn Complete".Log();
             return map;
         }
 

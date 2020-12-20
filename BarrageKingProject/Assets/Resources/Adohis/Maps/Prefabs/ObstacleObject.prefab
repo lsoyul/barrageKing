@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8393787979050905857}
   - component: {fileID: 876037314354292738}
   - component: {fileID: 486227354097478116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667959843700053408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4143630990905315720}
   - component: {fileID: 486227353210147840}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObstacleObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,6 +197,7 @@ MonoBehaviour:
   height: 3
   particleCountPerHeight: 100
   growDuration: 1
+  currentFadeDuration: 0
 --- !u!1 &5968543383002079372
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +209,7 @@ GameObject:
   - component: {fileID: 2656442100942931252}
   - component: {fileID: 7896200560063499633}
   - component: {fileID: 3709879523000344038}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObjectHideEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6280817290952590156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +353,7 @@ GameObject:
   - component: {fileID: 5599076195353035258}
   - component: {fileID: 8123734166788934525}
   - component: {fileID: 1549857566941564664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObjectRevealEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2185843531852298578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +496,7 @@ GameObject:
   - component: {fileID: 8623223183735164969}
   - component: {fileID: 1426405351485520547}
   - component: {fileID: 1919842713766261310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

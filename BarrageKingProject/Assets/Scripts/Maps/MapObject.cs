@@ -22,6 +22,7 @@ namespace Adohi
     {
         private Color startColor;
         private Color endColor;
+        private Material material;
         public MapObjectType objectType;
         public float timeing = 0.6f;
         public Color defalutColor;
@@ -38,7 +39,12 @@ namespace Adohi
         public float height;
         public int particleCountPerHeight = 200;
         public float growDuration;
+        public float currentFadeDuration;
 
+        private void Awake()
+        {
+            material = object3D.GetComponentInChildren<Renderer>().material;
+        }
         private void Start()
         {
             startColor = defalutColor;
@@ -48,6 +54,22 @@ namespace Adohi
             ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => Show2DObject();
             ViewPointManager.Instance.OnViewChangedStartTo3D += () => Hide2DObject();
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => Show3DObject();
+        }
+
+        private void Update()
+        {
+            if (currentFadeDuration > 0f)
+            {
+                var color = this.material.GetColor("_BaseColor");
+                this.material.SetColor("_BaseColor", new Color(color.r, color.g, color.b, 0.4f));
+                currentFadeDuration -= Time.deltaTime;
+            }
+            else
+            {
+                var color = this.material.GetColor("_BaseColor");
+                this.material.SetColor("_BaseColor", new Color(color.r, color.g, color.b, 1f));
+                currentFadeDuration = 0f;
+            }
         }
 
         [Button]
@@ -100,17 +122,12 @@ namespace Adohi
             this.object3D.SetActive(false);
             this.object2D.SetActive(false);
         }
-        /*
-        public void AddBlock3D()
-        {
-            this.height += 1f;
-        }
+        
 
-        public void PushBlock3D()
+        public void DoFade3D()
         {
 
         }
-        */
     }
 
 }

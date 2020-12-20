@@ -2,6 +2,7 @@
 using PD.UnityEngineExtensions;
 using Sirenix.OdinInspector;
 using System.Threading;
+using UniRx;
 using UnityEngine;
 
 namespace Adohi
@@ -13,17 +14,17 @@ namespace Adohi
         private Vector3 pushingDirection3D;
 
         [Header("Models")]
-        public SpriteRenderer Model2D;
-        public GameObject Model3D;
+        public SpriteRenderer model2D;
+        public GameObject model3D;
 
         [Header("Status")]
         public Location location;
+        //public ReactiveProperty<Location> locationProperty;
         public float remainPower;
         public float remainDuration;
         public bool IsPushing { get => remainPower > 0f || remainDuration > 0f; }
         private void Start()
         {
-            Construct2D(new Location(5, 5));
             ViewPointManager.Instance.OnViewChangedStartTo2D += To2DStart;
             ViewPointManager.Instance.OnViewChangedEndTo2D += To2DEnd;
             ViewPointManager.Instance.OnViewChangedStartTo3D += To3DStart;
@@ -33,21 +34,25 @@ namespace Adohi
         {
             this.location = location;
             this.transform.position = location.ToVector();
+            model2D.gameObject.SetActive(true);
         }
 
         public void Construct3D(Vector3 position)
         {
             this.transform.position = position;
+            model3D.gameObject.SetActive(true);
         }
 
         public void To2DStart()
         {
             cancellationTokenSource?.Cancel();
+            model3D.gameObject.SetActive(false);
             this.location = new Location(this.transform.position.x.RoundToInt(), this.transform.position.z.RoundToInt(), 0);
         }
 
         public void To2DEnd()
         {
+            model3D.gameObject.SetActive(true);
             if (this.remainPower > 0f && this.remainDuration > 0f)
             {
                 var direction = pushingDirection3D.ToDirection();
@@ -58,11 +63,13 @@ namespace Adohi
         public void To3DStart()
         {
             cancellationTokenSource?.Cancel();
+            model2D.gameObject.SetActive(false);
             this.transform.position = this.location.ToVector();
         }
 
         public void To3DEnd()
         {
+            model2D.gameObject.SetActive(true);
             if (this.remainPower > 0f && this.remainDuration > 0f)
             {
                 var direction = pushingDirection2D.ToVector();
@@ -87,7 +94,7 @@ namespace Adohi
                 if (distance.CeilToInt() > currentMoveLength)
                 {
                     var nextLocation = this.location + direction;
-                    if (MapManager.Instance.map2D[nextLocation.X, nextLocation.Y] == 0)
+                    if (!MapManager.Instance.IsAvailableLocation(nextLocation.X, nextLocation.Y))
                     {
                         this.remainPower = 0f;
                         this.remainDuration = 0f;
@@ -98,8 +105,8 @@ namespace Adohi
                         currentMoveLength = distance.CeilToInt();
                         this.remainPower = (float)power * (1f - ratio);
                         this.remainDuration = duration - currentTime;
-                        MapManager.Instance.map2D[this.location.X, this.location.Y] = 1;
-                        MapManager.Instance.map2D[nextLocation.X, nextLocation.Y] = 0;
+                        //MapManager.Instance.map2D[this.location.X, this.location.Y] = 1;
+                        //MapManager.Instance.map2D[nextLocation.X, nextLocation.Y] = 0;
                         this.location = nextLocation;
                     }                 
                 }

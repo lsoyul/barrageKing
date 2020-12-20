@@ -12,7 +12,8 @@ namespace Adohi
     {
         private Character character;
         private CapsuleCollider collider3D;
-        private bool is2DMove = true;
+        private bool isMoveAvailable = true;
+
         public KeyCode upKey = KeyCode.W;
         public KeyCode downKey = KeyCode.S;
         public KeyCode leftKey = KeyCode.A;
@@ -21,7 +22,6 @@ namespace Adohi
         public Direction moveDirection2D;
 
         [Header("Move2D")]      
-        public bool isMove2DAvailable;
         public bool isMoving2D;
         public int moveFrame;
         public float keyInputAvailableThreshold = 0.5f;
@@ -65,14 +65,16 @@ namespace Adohi
 
         private void Start()
         {
+            IngameTaskManager.Instance.OnStartGame += () => this.isMoveAvailable = true;
             ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => To2DViewStart();
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => To3DViewMiddle();
             ViewPointManager.Instance.OnViewChangedEndTo2D += () => To2DViewEnd();
             ViewPointManager.Instance.OnViewChangedEndTo3D += () => To3DViewEnd();
 
             this.transform.position = CurrentLocation.ToVector();
-
         }
+
+
         private void FixedUpdate()
         {
             if (!ViewPointManager.Instance.isViewChanging)
@@ -84,14 +86,21 @@ namespace Adohi
                         SetDirection();
 
                     }
-                    if (isMove2DAvailable && !isMoving2D)
+                    if (IsMoveAvailable() && !isMoving2D)
                     {
                         if (moveDirection2D != Direction.None)
                         {
+                            this.character.alignDirection = moveDirection2D;
+                            this.character.animator2D.SetInteger("alignDirection", (int)this.character.alignDirection);
+
                             var nextLocation = CurrentLocation + moveDirection2D;
-                            if (MapManager.Instance.map2D[nextLocation.X, nextLocation.Y] == 1)
+                            if (MapManager.Instance.IsAvailableLocation(nextLocation))
                             {
                                 Move2DTask(nextLocation);
+                            }
+                            else
+                            {
+                                moveDirection2D = Direction.None;
                             }
                         }
                     }
@@ -130,10 +139,9 @@ namespace Adohi
         {
             this.isKeyInputAvailable = false;
             this.moveDirection2D = Direction.None;
-            isMove2DAvailable = false;
+            character.animator2D.SetBool("isMove", true);
             await MovePosition2DTask(nextLocation);
-            isMove2DAvailable = true;
-            
+            character.animator2D.SetBool("isMove", false);
         }
 
         public async UniTask MovePosition2DTask(Location location)
@@ -194,7 +202,8 @@ namespace Adohi
 
         public void CheckGround(float rayDistance)
         {
-            if (Physics.Raycast(this.transform.position+Vector3.up, Vector3.down, out var hitinfo, rayDistance, 1 << LayerMask.NameToLayer("Ground")))
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            if (Physics.Raycast(this.transform.position+Vector3.up, Vector3.down, out var hitinfo, rayDistance, layerMask))
             {
                 this.isGround3D = true;
                 this.transform.SetYPosition(hitinfo.point.y);
@@ -255,11 +264,12 @@ namespace Adohi
         public void To3DViewMiddle()
         {
             collider3D.enabled = true;
-            var isHit = Physics.Raycast(this.CurrentLocation.ToVector() + Vector3.up * 100f, Vector3.down, out var hitinfo, 200f, 1 << LayerMask.NameToLayer("Ground"));
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            var isHit = Physics.Raycast(this.CurrentLocation.ToVector() + Vector3.up * 100f, Vector3.down, out var hitinfo, 200f, layerMask);
             if (isHit)
             {
                 var height = hitinfo.point.y;
-                this.transform.position = this.CurrentLocation.ToVector() + Vector3.up * height;
+                this.transform.position = this.CurrentLocation.ToVector() + Vector3.up * (height + 2f);
             }
         }
 
@@ -268,7 +278,10 @@ namespace Adohi
 
         }
 
-
+        public bool IsMoveAvailable()
+        {
+            return this.isMoveAvailable && !ViewPointManager.Instance.isViewChanging && !this.isMoving2D && !this.character.boxController.isConstructing; 
+        }
     }
 
 }

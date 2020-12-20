@@ -9,7 +9,7 @@ namespace Adohi
 
         public static Vector3 RaycastPoint(Vector3 startPosition, Vector3 direction, int layer, out bool isHit)
         {
-            if (Physics.Raycast(startPosition, direction, out var hitinfo, 1 << LayerMask.NameToLayer("Ground")))
+            if (Physics.Raycast(startPosition, direction, out var hitinfo, 1 << layer))
             {
                 isHit = true;
                 return hitinfo.point;
