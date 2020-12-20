@@ -63,12 +63,14 @@ namespace Adohi
         public async UniTask ChangeViewPointTask()
         {
             this.isViewChanging = true;
-
+            "start".Log();
             StartChangeViewPoint();
             await UniTask.Delay((firstViewChangeDuration * 1000).ToInt(), true);
+            "middle".Log();
 
             MiddleChangeViewPoint();
             await UniTask.Delay((secondViewChangeDuration * 1000).ToInt(), true);
+            "end".Log();
 
             EndChangeViewPoint();
             this.isViewChanging = false;

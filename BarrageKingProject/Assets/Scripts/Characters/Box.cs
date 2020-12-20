@@ -12,7 +12,7 @@ namespace Adohi
         private CancellationTokenSource cancellationTokenSource;
         private Direction pushingDirection2D;
         private Vector3 pushingDirection3D;
-
+        private Rigidbody rb;
         [Header("Models")]
         public SpriteRenderer model2D;
         public GameObject model3D;
@@ -25,10 +25,16 @@ namespace Adohi
         public bool isGround3D;
         public float velocityY;
         public bool IsPushing { get => remainPower > 0f || remainDuration > 0f; }
+        private void Awake()
+        {
+            this.rb = GetComponent<Rigidbody>();
+        }
         private void Start()
         {
             ViewPointManager.Instance.OnViewChangedStartTo2D += To2DStart;
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D += To2DMiddle;
             ViewPointManager.Instance.OnViewChangedEndTo2D += To2DEnd;
+
             ViewPointManager.Instance.OnViewChangedStartTo3D += To3DStart;
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += To3DMiddle;
             ViewPointManager.Instance.OnViewChangedEndTo3D += To3DEnd;
@@ -63,9 +69,10 @@ namespace Adohi
             model3D.gameObject.SetActive(false);
         }
 
-        public void T2DMiddle()
+        public void To2DMiddle()
         {
             model2D.gameObject.SetActive(true);
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 
             this.location = new Location(this.transform.position.x.RoundToInt(), this.transform.position.z.RoundToInt(), 0);
             this.transform.position = location.ToVector();
@@ -82,7 +89,6 @@ namespace Adohi
 
         public void To3DStart()
         {
-            "3d log".Log();
             cancellationTokenSource?.Cancel();
             model2D.gameObject.SetActive(false);
             this.transform.position = this.location.ToVector();
@@ -91,6 +97,8 @@ namespace Adohi
         public void To3DMiddle()
         {
             model3D.gameObject.SetActive(true);
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+
             int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
             var isHit1 = Physics.Raycast(this.transform.position + Vector3.left * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo1, 100f, layerMask);
             var isHit2 = Physics.Raycast(this.transform.position + Vector3.right * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo2, 100f, layerMask);
@@ -100,7 +108,6 @@ namespace Adohi
             var maxHeight = float.MinValue;
             if (isHit1 || isHit2 || isHit3 || isHit4)
             {
-                "ishit".Log();
                 if (isHit1)
                 {
                     maxHeight = maxHeight > hitInfo1.point.y ? maxHeight : hitInfo1.point.y;
@@ -221,7 +228,6 @@ namespace Adohi
             var maxHeight = float.MinValue;
             if (isHit1 || isHit2 || isHit3 || isHit4)
             {
-                "ishit".Log();
                 if (isHit1)
                 {
                     maxHeight = maxHeight > hitInfo1.point.y ? maxHeight : hitInfo1.point.y;

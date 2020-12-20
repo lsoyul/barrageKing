@@ -417,7 +417,7 @@ MonoBehaviour:
   object3D: {fileID: 5047695520890572296}
   object3DMaterial: {fileID: 4237472254665700392}
   revealVFX: {fileID: 6465013620278691318}
-  hidedVFX: {fileID: 4940987682051179514}
+  hideVFX: {fileID: 4940987682051179514}
   height: 1
   particleCountPerHeight: 100
   growDuration: 1

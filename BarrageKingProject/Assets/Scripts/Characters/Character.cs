@@ -54,7 +54,7 @@ namespace Adohi
         // Update is called once per frame
         void Update()
         {
-            if (ViewPointManager.Instance.currentViewPoint == ViewPoint.threeDimensional)
+            if (!ViewPointManager.Instance.isViewChanging && ViewPointManager.Instance.currentViewPoint == ViewPoint.threeDimensional)
             {
                 Rotate3D();
             }

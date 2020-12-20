@@ -66,7 +66,7 @@ namespace Adohi
         private void Start()
         {
             IngameTaskManager.Instance.OnStartGame += () => this.isMoveAvailable = true;
-            ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => To2DViewStart();
+            ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => To2DViewMiddle();
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => To3DViewMiddle();
             ViewPointManager.Instance.OnViewChangedEndTo2D += () => To2DViewEnd();
             ViewPointManager.Instance.OnViewChangedEndTo3D += () => To3DViewEnd();
@@ -249,13 +249,13 @@ namespace Adohi
             }
         }
 
-        public void To2DViewStart()
+        public void To2DViewMiddle()
         {
             collider3D.enabled = false;
             CurrentLocation = new Location(this.transform.position.x.Round(), this.transform.position.z.Round(), 0);
             this.transform.position = CurrentLocation.ToVector();
             this.character.alignDirection = this.character.XZForward.ToDirection();
-            this.transform.rotation = this.character.alignDirection.ToRotation();
+            this.transform.rotation = Quaternion.identity;
         }
 
         public void To2DViewEnd()
