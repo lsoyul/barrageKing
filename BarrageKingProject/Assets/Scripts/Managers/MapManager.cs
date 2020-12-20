@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using NUnit.Framework;
 using PD.UnityEngineExtensions;
 using Pixelplacement;
 using System.Collections;
@@ -55,7 +56,12 @@ namespace Adohi
             boxes.ForEach(b => b.location.Log());
             var isBoxExist = boxes.Any(b => b.location.Equals(x, y));
             var isObstacle = map2D[x, y] == 0;
-            return !(isBoxExist || isObstacle);
+            var isCharacter = false;
+            if (CharacterManager.Instance.character != null)
+            {
+                isCharacter = CharacterManager.Instance.character.currentLocation.Equals(x, y);
+            }
+            return !(isBoxExist || isObstacle || isCharacter);
         }
     }
 

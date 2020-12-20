@@ -70,6 +70,7 @@ namespace Adohi
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => To3DViewMiddle();
             ViewPointManager.Instance.OnViewChangedEndTo2D += () => To2DViewEnd();
             ViewPointManager.Instance.OnViewChangedEndTo3D += () => To3DViewEnd();
+            ViewPointManager.Instance.ViewPointChangeConditions += () => IsMoveAvailable();
 
             this.transform.position = CurrentLocation.ToVector();
         }
@@ -202,7 +203,7 @@ namespace Adohi
 
         public void CheckGround(float rayDistance)
         {
-            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
             if (Physics.Raycast(this.transform.position+Vector3.up, Vector3.down, out var hitinfo, rayDistance, layerMask))
             {
                 this.isGround3D = true;
@@ -264,7 +265,7 @@ namespace Adohi
         public void To3DViewMiddle()
         {
             collider3D.enabled = true;
-            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
             var isHit = Physics.Raycast(this.CurrentLocation.ToVector() + Vector3.up * 100f, Vector3.down, out var hitinfo, 200f, layerMask);
             if (isHit)
             {

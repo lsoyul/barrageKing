@@ -43,7 +43,7 @@ namespace Adohi
 
         private void Start()
         {
-            ViewPointManager.Instance.ViewPointChangeConditions += () => !isConstructing;
+            ViewPointManager.Instance.ViewPointChangeConditions += () => ConstuctAvailable();
         }
 
         private void Update()
@@ -113,7 +113,7 @@ namespace Adohi
         {
             isConstructing = true;
             await Jump(this.jumpHeight, duration);
-            int layerMask = LayerMask.GetMask("Ground", "Obstacle");
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
             if (Physics.Raycast(this.transform.position + jumpHeight * Vector3.up, Vector3.down, out var hitinfo, 100f, layerMask))
             {
                 "Ground Hit".Log();
