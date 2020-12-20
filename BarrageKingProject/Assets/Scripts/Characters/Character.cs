@@ -96,11 +96,12 @@ namespace Adohi
                 case ViewPoint.twoDimensional:
                     this.model2D.SetActive(true);
                     this.model3D.SetActive(false);
-                    //rb.fre
+                    rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
                     break;
                 case ViewPoint.threeDimensional:
                     this.model2D.SetActive(false);
                     this.model3D.SetActive(true);
+                    rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
                     break;
             }
         }
