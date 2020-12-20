@@ -69,13 +69,15 @@ namespace Habun
                     var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
                     var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
 
-                    if (!MapManager.Instance.IsAvailableLocation(new Location(randomPosition.x.RoundToInt(), randomPosition.z.RoundToInt())))
+                    var tempA = randomPosition.x.RoundToInt() > 21 ? 0 : randomPosition.x.RoundToInt();
+                    var tempB = randomPosition.z.RoundToInt() > 21 ? 0 : randomPosition.z.RoundToInt();
+                    if (!MapManager.Instance.IsAvailableLocation(new Location(tempA, tempB)))
                     {
                         continue;
                     }
 
                     var instance = PoolManager.Instance.Pick(wave.prefab);
-                    instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
+                    instance.transform.SetPositionAndRotation(randomPosition + Vector3.up, randomRotation);
 
                     yield return new WaitForSeconds(wave.spawnInterval);
                 }
