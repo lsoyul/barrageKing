@@ -74,6 +74,7 @@ MonoBehaviour:
   sensor: {fileID: 97952575501200697}
   patrols: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
   moveTarget: {fileID: 0}
+  moveSpeed: 4
   moveTime: 0.5
   timer: 0
 --- !u!1 &97952575081793490
@@ -418,6 +419,7 @@ GameObject:
   - component: {fileID: 97952575885333585}
   - component: {fileID: 97952575885333584}
   - component: {fileID: 97952575885333587}
+  - component: {fileID: 7950693889514167780}
   - component: {fileID: 5737622076573686292}
   - component: {fileID: -5799182412935447607}
   - component: {fileID: 3016058777119907569}
@@ -427,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &97952575885333585
 Transform:
   m_ObjectHideFlags: 0
@@ -501,6 +503,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7950693889514167780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97952575885333586}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!114 &5737622076573686292
 MonoBehaviour:
   m_ObjectHideFlags: 0

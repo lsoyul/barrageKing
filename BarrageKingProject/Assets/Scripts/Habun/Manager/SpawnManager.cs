@@ -18,14 +18,13 @@ namespace Habun
             [Indent] public float spawnInterval;
             [Indent] public float minRadius;
             [Indent] public float maxRadius;
-            [Space] public List<Transform> spawnPositions;
         }
 
         [Header("Spawn Settings")]
         [SerializeField]
-        private GameObjectValueList spawnList;
+        private GameObjectValueList spawnObjects;
         [SerializeField]
-        private Vector3 spawnOffset;
+        private GameObjectValueList spawnPositions;
 
         [Header("Wave Settings")]
         [SerializeField]
@@ -51,7 +50,7 @@ namespace Habun
 
         public void NextWave(GameObject _)
         {
-            if (spawnList.Count <= 0)
+            if (spawnObjects.Count <= 0)
             {
                 var nextWave = wave[waveNumber.Value++];
                 StartCoroutine(SpawnWave(nextWave));
@@ -64,26 +63,29 @@ namespace Habun
         {
             foreach (var wave in nextWave)
             {
-                if (wave.spawnPositions != null && wave.spawnPositions.Count > 0)
+                for (var i = 0; i < wave.spawnCount; i++)
                 {
-                    var randomIndex = Random.Range(0, wave.spawnPositions.Count);
-                    var randomPosition = wave.spawnPositions[randomIndex].position;
-                    var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
-                    var instance = PoolManager.Instance.Pick(wave.prefab);
-                    instance.transform.SetPositionAndRotation(randomPosition + spawnOffset, randomRotation);
-                }
-                else
-                {
-                    var centerPoint = new Location(MapManager.Instance.mapWidth / 2, MapManager.Instance.mapLength / 2).ToVector();
-                    var randomRadius = Random.Range(wave.minRadius, wave.maxRadius);
-                    var randomPoint = Random.insideUnitCircle * randomRadius;
-                    var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
-                    var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
-                    var instance = PoolManager.Instance.Pick(wave.prefab);
-                    instance.transform.SetPositionAndRotation(randomPosition + spawnOffset, randomRotation);
-                }
+                    if (spawnPositions != null && spawnPositions.Count > 0)
+                    {
+                        var randomIndex = Random.Range(0, spawnPositions.Count);
+                        var randomPosition = spawnPositions.Get(randomIndex).transform.position;
+                        var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
+                        var instance = PoolManager.Instance.Pick(wave.prefab);
+                        instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
+                    }
+                    else
+                    {
+                        var centerPoint = new Location(MapManager.Instance.mapWidth / 2, MapManager.Instance.mapLength / 2).ToVector();
+                        var randomRadius = Random.Range(wave.minRadius, wave.maxRadius);
+                        var randomPoint = Random.insideUnitCircle * randomRadius;
+                        var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
+                        var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
+                        var instance = PoolManager.Instance.Pick(wave.prefab);
+                        instance.transform.SetPositionAndRotation(randomPosition, randomRotation);
+                    }
 
-                yield return new WaitForSeconds(wave.spawnInterval);
+                    yield return new WaitForSeconds(wave.spawnInterval);
+                }
             }
         }
 
