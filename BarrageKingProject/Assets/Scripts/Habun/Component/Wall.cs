@@ -94,7 +94,21 @@ namespace Habun
 
             var meshRenderer = GetComponentInChildren<MeshRenderer>(true);
             meshRenderer.material = render[type];
-            
+        }
+
+        public Health Health { get; private set; }
+
+        private void Awake()
+        {
+            Health = GetComponent<Health>();
+        }
+
+        private void Update()
+        {
+            if (Health)
+            {
+                Health.Damage(Time.deltaTime * 33f);
+            }
         }
 
     }

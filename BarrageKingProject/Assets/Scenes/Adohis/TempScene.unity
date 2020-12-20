@@ -1906,63 +1906,989 @@ PrefabInstance:
       objectReference: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 10
+      value: 196
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"wave.[0]","length":2'
+      value: '"path":"wave","length":5'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"wave.[0]","length":5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"wave.[0].[0]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
         Assembly-CSharp","prefab":$eref:0,"spawnCount":5,"spawnInterval":1,"minRadius":0,"maxRadius":0}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
       value: '"path":"wave.[0].[0].maxRadius","value":{"$id":0,"$type":"System.Single,
         mscorlib",15}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
       value: '"path":"wave.[0].[0].minRadius","value":{"$id":0,"$type":"System.Single,
         mscorlib",5}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"wave.[0].[0].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
       value: '"path":"wave.[0].[1]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
         Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
       value: '"path":"wave.[0].[1].maxRadius","value":{"$id":0,"$type":"System.Single,
         mscorlib",15}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      propertyPath: serializationData.PrefabModifications.Array.data[8]
       value: '"path":"wave.[0].[1].minRadius","value":{"$id":0,"$type":"System.Single,
         mscorlib",5}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      propertyPath: serializationData.PrefabModifications.Array.data[9]
       value: '"path":"wave.[0].[1].prefab","value":$eref:1'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[8]
+      propertyPath: serializationData.ReferencedUnityObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[10]
       value: '"path":"wave.[0].[1].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[11]
+      value: '"path":"wave.[0].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[12]
+      value: '"path":"wave.[0].[2]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[13]
+      value: '"path":"wave.[0].[2].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[14]
+      value: '"path":"wave.[0].[2].minRadius","value":{"$id":0,"$type":"System.Single,
         mscorlib",5}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[9]
-      value: '"path":"wave.[0].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+      propertyPath: serializationData.PrefabModifications.Array.data[15]
+      value: '"path":"wave.[0].[2].prefab","value":$eref:2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[16]
+      value: '"path":"wave.[0].[2].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[17]
+      value: '"path":"wave.[0].[2].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[18]
+      value: '"path":"wave.[0].[3]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[19]
+      value: '"path":"wave.[0].[3].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[20]
+      value: '"path":"wave.[0].[3].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[21]
+      value: '"path":"wave.[0].[3].prefab","value":$eref:3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[22]
+      value: '"path":"wave.[0].[3].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[23]
+      value: '"path":"wave.[0].[3].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[24]
+      value: '"path":"wave.[0].[4]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[25]
+      value: '"path":"wave.[0].[4].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[26]
+      value: '"path":"wave.[0].[4].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[27]
+      value: '"path":"wave.[0].[4].prefab","value":$eref:4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[28]
+      value: '"path":"wave.[0].[4].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[29]
+      value: '"path":"wave.[0].[4].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[30]
+      value: '"path":"wave.[1]","value":{"$id":0,"$type":"System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp]], mscorlib","$rlength":5,"$rcontent":[{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:5,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:2,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:6,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:7,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:8,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[31]
+      value: '"path":"wave.[1].[0]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[32]
+      value: '"path":"wave.[1].[0].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[33]
+      value: '"path":"wave.[1].[0].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[34]
+      value: '"path":"wave.[1].[0].prefab","value":$eref:5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[35]
+      value: '"path":"wave.[1].[0].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[36]
+      value: '"path":"wave.[1].[0].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[37]
+      value: '"path":"wave.[1].[1]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[38]
+      value: '"path":"wave.[1].[1].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[39]
+      value: '"path":"wave.[1].[1].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[40]
+      value: '"path":"wave.[1].[1].prefab","value":$eref:2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[41]
+      value: '"path":"wave.[1].[1].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[42]
+      value: '"path":"wave.[1].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[43]
+      value: '"path":"wave.[1].[2]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[44]
+      value: '"path":"wave.[1].[2].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[45]
+      value: '"path":"wave.[1].[2].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[46]
+      value: '"path":"wave.[1].[2].prefab","value":$eref:6'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[47]
+      value: '"path":"wave.[1].[2].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[48]
+      value: '"path":"wave.[1].[2].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[49]
+      value: '"path":"wave.[1].[3]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[50]
+      value: '"path":"wave.[1].[3].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[51]
+      value: '"path":"wave.[1].[3].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[52]
+      value: '"path":"wave.[1].[3].prefab","value":$eref:7'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[53]
+      value: '"path":"wave.[1].[3].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[54]
+      value: '"path":"wave.[1].[3].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[55]
+      value: '"path":"wave.[1].[4]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[56]
+      value: '"path":"wave.[1].[4].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[57]
+      value: '"path":"wave.[1].[4].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[58]
+      value: '"path":"wave.[1].[4].prefab","value":$eref:8'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[59]
+      value: '"path":"wave.[1].[4].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[60]
+      value: '"path":"wave.[1].[4].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[61]
+      value: '"path":"wave.[2]","value":{"$id":0,"$type":"System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp]], mscorlib","$rlength":5,"$rcontent":[{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:9,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:7,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:5,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:10,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:11,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[62]
+      value: '"path":"wave.[2].[0]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[63]
+      value: '"path":"wave.[2].[0].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[64]
+      value: '"path":"wave.[2].[0].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[65]
+      value: '"path":"wave.[2].[0].prefab","value":$eref:9'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[66]
+      value: '"path":"wave.[2].[0].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[67]
+      value: '"path":"wave.[2].[0].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[68]
+      value: '"path":"wave.[2].[1]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[69]
+      value: '"path":"wave.[2].[1].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[70]
+      value: '"path":"wave.[2].[1].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[71]
+      value: '"path":"wave.[2].[1].prefab","value":$eref:7'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[72]
+      value: '"path":"wave.[2].[1].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[73]
+      value: '"path":"wave.[2].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[74]
+      value: '"path":"wave.[2].[2]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[75]
+      value: '"path":"wave.[2].[2].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[76]
+      value: '"path":"wave.[2].[2].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[77]
+      value: '"path":"wave.[2].[2].prefab","value":$eref:5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[78]
+      value: '"path":"wave.[2].[2].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[79]
+      value: '"path":"wave.[2].[2].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[80]
+      value: '"path":"wave.[2].[3]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[81]
+      value: '"path":"wave.[2].[3].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[82]
+      value: '"path":"wave.[2].[3].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[83]
+      value: '"path":"wave.[2].[3].prefab","value":$eref:10'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[84]
+      value: '"path":"wave.[2].[3].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[85]
+      value: '"path":"wave.[2].[3].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[86]
+      value: '"path":"wave.[2].[4]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[87]
+      value: '"path":"wave.[2].[4].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[88]
+      value: '"path":"wave.[2].[4].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[89]
+      value: '"path":"wave.[2].[4].prefab","value":$eref:11'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[90]
+      value: '"path":"wave.[2].[4].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[91]
+      value: '"path":"wave.[2].[4].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[92]
+      value: '"path":"wave.[3]","value":{"$id":0,"$type":"System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp]], mscorlib","$rlength":5,"$rcontent":[{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:5,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:3,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:6,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:12,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:13,"spawnCount":2,"spawnInterval":1,"minRadius":5,"maxRadius":15}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[93]
+      value: '"path":"wave.[3].[0]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[94]
+      value: '"path":"wave.[3].[0].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[95]
+      value: '"path":"wave.[3].[0].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[96]
+      value: '"path":"wave.[3].[0].prefab","value":$eref:5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[97]
+      value: '"path":"wave.[3].[0].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[98]
+      value: '"path":"wave.[3].[0].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[99]
+      value: '"path":"wave.[3].[1]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[100]
+      value: '"path":"wave.[3].[1].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[101]
+      value: '"path":"wave.[3].[1].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[102]
+      value: '"path":"wave.[3].[1].prefab","value":$eref:3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[103]
+      value: '"path":"wave.[3].[1].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[104]
+      value: '"path":"wave.[3].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[105]
+      value: '"path":"wave.[3].[2]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[106]
+      value: '"path":"wave.[3].[2].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[107]
+      value: '"path":"wave.[3].[2].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[108]
+      value: '"path":"wave.[3].[2].prefab","value":$eref:6'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[109]
+      value: '"path":"wave.[3].[2].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[110]
+      value: '"path":"wave.[3].[2].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[111]
+      value: '"path":"wave.[3].[3]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[112]
+      value: '"path":"wave.[3].[3].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[113]
+      value: '"path":"wave.[3].[3].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[114]
+      value: '"path":"wave.[3].[3].prefab","value":$eref:12'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[115]
+      value: '"path":"wave.[3].[3].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[116]
+      value: '"path":"wave.[3].[3].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[117]
+      value: '"path":"wave.[3].[4]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[118]
+      value: '"path":"wave.[3].[4].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[119]
+      value: '"path":"wave.[3].[4].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[120]
+      value: '"path":"wave.[3].[4].prefab","value":$eref:13'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[121]
+      value: '"path":"wave.[3].[4].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[122]
+      value: '"path":"wave.[3].[4].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[123]
+      value: '"path":"wave.[4]","value":{"$id":0,"$type":"System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp]], mscorlib","$rlength":12,"$rcontent":[{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:5,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:10,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:2,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:3,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:0,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:6,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:12,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:7,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:4,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:11,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:8,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15},{"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":$eref:14,"spawnCount":1,"spawnInterval":0,"minRadius":5,"maxRadius":15}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[124]
+      value: '"path":"wave.[4].[0]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[125]
+      value: '"path":"wave.[4].[0].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[126]
+      value: '"path":"wave.[4].[0].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[127]
+      value: '"path":"wave.[4].[0].prefab","value":$eref:5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[128]
+      value: '"path":"wave.[4].[0].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[129]
+      value: '"path":"wave.[4].[0].spawnInterval","value":{"$id":0,"$type":"System.Single,
         mscorlib",0}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
-      propertyPath: serializationData.ReferencedUnityObjects.Array.size
-      value: 1
+      propertyPath: serializationData.PrefabModifications.Array.data[130]
+      value: '"path":"wave.[4].[1]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[131]
+      value: '"path":"wave.[4].[1].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[132]
+      value: '"path":"wave.[4].[1].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[133]
+      value: '"path":"wave.[4].[1].prefab","value":$eref:10'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[134]
+      value: '"path":"wave.[4].[1].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[135]
+      value: '"path":"wave.[4].[1].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[136]
+      value: '"path":"wave.[4].[10]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[137]
+      value: '"path":"wave.[4].[10].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[138]
+      value: '"path":"wave.[4].[10].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[139]
+      value: '"path":"wave.[4].[10].prefab","value":$eref:8'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[140]
+      value: '"path":"wave.[4].[10].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[141]
+      value: '"path":"wave.[4].[10].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[142]
+      value: '"path":"wave.[4].[11]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[143]
+      value: '"path":"wave.[4].[11].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[144]
+      value: '"path":"wave.[4].[11].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[145]
+      value: '"path":"wave.[4].[11].prefab","value":$eref:14'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[146]
+      value: '"path":"wave.[4].[11].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[147]
+      value: '"path":"wave.[4].[11].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[148]
+      value: '"path":"wave.[4].[2]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[149]
+      value: '"path":"wave.[4].[2].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[150]
+      value: '"path":"wave.[4].[2].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[151]
+      value: '"path":"wave.[4].[2].prefab","value":$eref:2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[152]
+      value: '"path":"wave.[4].[2].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[153]
+      value: '"path":"wave.[4].[2].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[154]
+      value: '"path":"wave.[4].[3]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[155]
+      value: '"path":"wave.[4].[3].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[156]
+      value: '"path":"wave.[4].[3].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[157]
+      value: '"path":"wave.[4].[3].prefab","value":$eref:3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[158]
+      value: '"path":"wave.[4].[3].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[159]
+      value: '"path":"wave.[4].[3].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[160]
+      value: '"path":"wave.[4].[4]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[161]
+      value: '"path":"wave.[4].[4].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[162]
+      value: '"path":"wave.[4].[4].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[163]
+      value: '"path":"wave.[4].[4].prefab","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[164]
+      value: '"path":"wave.[4].[4].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[165]
+      value: '"path":"wave.[4].[4].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[166]
+      value: '"path":"wave.[4].[5]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[167]
+      value: '"path":"wave.[4].[5].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[168]
+      value: '"path":"wave.[4].[5].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[169]
+      value: '"path":"wave.[4].[5].prefab","value":$eref:6'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[170]
+      value: '"path":"wave.[4].[5].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[171]
+      value: '"path":"wave.[4].[5].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[172]
+      value: '"path":"wave.[4].[6]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[173]
+      value: '"path":"wave.[4].[6].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[174]
+      value: '"path":"wave.[4].[6].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[175]
+      value: '"path":"wave.[4].[6].prefab","value":$eref:12'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[176]
+      value: '"path":"wave.[4].[6].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[177]
+      value: '"path":"wave.[4].[6].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[178]
+      value: '"path":"wave.[4].[7]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[179]
+      value: '"path":"wave.[4].[7].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[180]
+      value: '"path":"wave.[4].[7].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[181]
+      value: '"path":"wave.[4].[7].prefab","value":$eref:7'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[182]
+      value: '"path":"wave.[4].[7].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[183]
+      value: '"path":"wave.[4].[7].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[184]
+      value: '"path":"wave.[4].[8]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[185]
+      value: '"path":"wave.[4].[8].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[186]
+      value: '"path":"wave.[4].[8].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[187]
+      value: '"path":"wave.[4].[8].prefab","value":$eref:4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[188]
+      value: '"path":"wave.[4].[8].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[189]
+      value: '"path":"wave.[4].[8].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[190]
+      value: '"path":"wave.[4].[9]","value":{"$id":0,"$type":"Habun.SpawnManager+SpawnInfo,
+        Assembly-CSharp","prefab":null,"spawnCount":0,"spawnInterval":0,"minRadius":0,"maxRadius":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[191]
+      value: '"path":"wave.[4].[9].maxRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",15}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[192]
+      value: '"path":"wave.[4].[9].minRadius","value":{"$id":0,"$type":"System.Single,
+        mscorlib",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[193]
+      value: '"path":"wave.[4].[9].prefab","value":$eref:11'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[194]
+      value: '"path":"wave.[4].[9].spawnCount","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[195]
+      value: '"path":"wave.[4].[9].spawnInterval","value":{"$id":0,"$type":"System.Single,
+        mscorlib",0}'
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
@@ -1972,6 +2898,58 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
       value: 
       objectReference: {fileID: 6151302522163882593, guid: bcb5048af87ebec43b7cb6982dc451c8, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: -6546073588727433937, guid: 7293e8da32b607540953ce2b6ce6c3c4, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: -4238536848893725941, guid: 84a967df091cd374486f8f9a7ec6d9ea, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 3016058777119907569, guid: 5a4b33dff363e8546a1056f35156527b, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 6745924094682815418, guid: eac90191b645cbe46822c65c679762f6, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 5908507415822776822, guid: 31fd5f35b498155459291eed9d4ccb8f, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: -4134482626563953961, guid: 1ff44b60610c6074b8224ff95d63ec37, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: -4833752597145954854, guid: 626e2c6c4b24f9d428735986ab05bcf0, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[9]
+      value: 
+      objectReference: {fileID: 7278461131373147733, guid: 6ee8f176db41e4a48ab76b98d12790bf, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 2528889459009130253, guid: d54ca4081a875e94283e20ec09f2deff, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[11]
+      value: 
+      objectReference: {fileID: -8970028178346531297, guid: d5529c4b9efeeec4384fe6e968a1bc99, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 1849067152392148612, guid: bfe90a5917c7ac943b48fcb90ded9a5d, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[13]
+      value: 
+      objectReference: {fileID: -7718648309503714572, guid: 9bfd30bb185e9504e875a087133daba2, type: 3}
+    - target: {fileID: 3952168416802194691, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[14]
+      value: 
+      objectReference: {fileID: -6153601310524215412, guid: d797dfa9ef17d01478bef87e462f9c4a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 668dbc611c7c5584ab230a5908943c7b, type: 3}
 --- !u!1001 &3356233953252427365
@@ -1981,6 +2959,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665333031}
     m_Modifications:
+    - target: {fileID: 588847760, guid: ca916465ab33a5343a0a383ca7c5506a, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 588847760, guid: ca916465ab33a5343a0a383ca7c5506a, type: 3}
     - target: {fileID: 3356233953205217896, guid: ca916465ab33a5343a0a383ca7c5506a, type: 3}
       propertyPath: m_RootOrder
       value: 3

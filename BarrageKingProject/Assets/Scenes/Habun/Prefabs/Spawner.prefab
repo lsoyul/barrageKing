@@ -1,305 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3952168415763623757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168415763623758}
-  - component: {fileID: 3952168415763623759}
-  m_Layer: 0
-  m_Name: SpawnPosition (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168415763623758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415763623757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: 1, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168415763623759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415763623757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168415866289828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168415866289829}
-  - component: {fileID: 3952168415866289830}
-  m_Layer: 0
-  m_Name: SpawnPosition (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168415866289829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415866289828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: 1, z: 17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168415866289830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415866289828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168415974999137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168415974999138}
-  - component: {fileID: 3952168415974999139}
-  m_Layer: 0
-  m_Name: SpawnPosition (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168415974999138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415974999137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 1, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168415974999139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168415974999137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168416003057359
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168416003057328}
-  - component: {fileID: 3952168416003057329}
-  m_Layer: 0
-  m_Name: SpawnPosition (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168416003057328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416003057359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 1, z: 17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168416003057329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416003057359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168416149293460
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168416149293461}
-  - component: {fileID: 3952168416149293462}
-  m_Layer: 0
-  m_Name: SpawnPosition (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168416149293461
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416149293460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1, z: 8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168416149293462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416149293460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168416671851353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168416671851354}
-  - component: {fileID: 3952168416671851355}
-  m_Layer: 0
-  m_Name: SpawnPosition (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168416671851354
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416671851353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168416671851355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416671851353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
 --- !u!1 &3952168416802194689
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,15 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3952168416940158952}
-  - {fileID: 3952168416149293461}
-  - {fileID: 3952168416671851354}
-  - {fileID: 3952168415763623758}
-  - {fileID: 3952168415866289829}
-  - {fileID: 3952168416003057328}
-  - {fileID: 3952168417470662570}
-  - {fileID: 3952168415974999138}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -357,6 +49,19 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 5789085267633905294, guid: 635fdd35736dea84e88b41762856e04a, type: 3}
     - {fileID: 6151302522163882593, guid: bcb5048af87ebec43b7cb6982dc451c8, type: 3}
+    - {fileID: -6546073588727433937, guid: 7293e8da32b607540953ce2b6ce6c3c4, type: 3}
+    - {fileID: -4238536848893725941, guid: 84a967df091cd374486f8f9a7ec6d9ea, type: 3}
+    - {fileID: 3016058777119907569, guid: 5a4b33dff363e8546a1056f35156527b, type: 3}
+    - {fileID: 6745924094682815418, guid: eac90191b645cbe46822c65c679762f6, type: 3}
+    - {fileID: 5908507415822776822, guid: 31fd5f35b498155459291eed9d4ccb8f, type: 3}
+    - {fileID: -4134482626563953961, guid: 1ff44b60610c6074b8224ff95d63ec37, type: 3}
+    - {fileID: -4833752597145954854, guid: 626e2c6c4b24f9d428735986ab05bcf0, type: 3}
+    - {fileID: 7278461131373147733, guid: 6ee8f176db41e4a48ab76b98d12790bf, type: 3}
+    - {fileID: 2528889459009130253, guid: d54ca4081a875e94283e20ec09f2deff, type: 3}
+    - {fileID: -8970028178346531297, guid: d5529c4b9efeeec4384fe6e968a1bc99, type: 3}
+    - {fileID: 1849067152392148612, guid: bfe90a5917c7ac943b48fcb90ded9a5d, type: 3}
+    - {fileID: -7718648309503714572, guid: 9bfd30bb185e9504e875a087133daba2, type: 3}
+    - {fileID: -6153601310524215412, guid: d797dfa9ef17d01478bef87e462f9c4a, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -368,14 +73,14 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 5
     - Name: 
       Entry: 7
       Data: 1|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 5
     - Name: 
       Entry: 7
       Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
@@ -384,7 +89,7 @@ MonoBehaviour:
       Data: 0
     - Name: spawnCount
       Entry: 3
-      Data: 5
+      Data: 2
     - Name: spawnInterval
       Entry: 4
       Data: 1
@@ -405,7 +110,689 @@ MonoBehaviour:
       Data: 1
     - Name: spawnCount
       Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
       Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 2
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 3
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 4
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 5
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 2
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 6
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 7
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 8
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 9
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 7
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 5
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 10
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 11
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 5
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 3
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 6
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 12
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 13
+    - Name: spawnCount
+      Entry: 3
+      Data: 2
+    - Name: spawnInterval
+      Entry: 4
+      Data: 1
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Habun.SpawnManager+SpawnInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 12
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 5
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 10
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 2
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 3
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 0
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 6
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 12
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 7
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 4
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 11
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 8
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
+    - Name: spawnInterval
+      Entry: 4
+      Data: 0
+    - Name: minRadius
+      Entry: 4
+      Data: 5
+    - Name: maxRadius
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Habun.SpawnManager+SpawnInfo, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 14
+    - Name: spawnCount
+      Entry: 3
+      Data: 1
     - Name: spawnInterval
       Entry: 4
       Data: 0
@@ -437,103 +824,3 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
---- !u!1 &3952168416940158951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168416940158952}
-  - component: {fileID: 3952168416940158953}
-  m_Layer: 0
-  m_Name: SpawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168416940158952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416940158951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1, z: 17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168416940158953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168416940158951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
---- !u!1 &3952168417470662569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3952168417470662570}
-  - component: {fileID: 3952168417470662571}
-  m_Layer: 0
-  m_Name: SpawnPosition (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3952168417470662570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168417470662569}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 1, z: 12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3952168416802194690}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3952168417470662571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3952168417470662569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  observer:
-    _usage: 0
-    _value: {fileID: 0}
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  observerList: {fileID: 11400000, guid: f590649cf36d30346aa09985a3f5a9af, type: 2}
