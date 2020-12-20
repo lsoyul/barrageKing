@@ -6,16 +6,16 @@ namespace Habun
     public class Damage : MonoBehaviour
     {
         [SerializeField]
-        private FloatReference damage;
+        protected FloatReference damage;
         [SerializeField]
-        private LayerMask mask;
+        protected LayerMask mask;
 
         [SerializeField, Space]
-        private ColliderUnityEvent onHit;
+        protected ColliderUnityEvent onHit;
 
         // PUBLIC METHODS: ----------------------------------------------------
 
-        public void Hit(Collider collider)
+        public virtual void Hit(Collider collider)
         {
             if ((mask.value & (1 << collider.gameObject.layer)) > 0)
             {
@@ -28,7 +28,7 @@ namespace Habun
 
         // CALLBACK METHODS: ----------------------------------------------------
 
-        private void OnTriggerEnter(Collider collider)
+        protected virtual void OnTriggerEnter(Collider collider)
         {
             if (collider == null)
             {
