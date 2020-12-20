@@ -16,6 +16,7 @@ namespace Adohi
         private async UniTask PrepareGameTask()
         {
             await MapManager.Instance.GenerateMap();
+            await UniTask.Delay(1000);
             await CharacterManager.Instance.GenerateCharacter();
 
             await StartGameTask();

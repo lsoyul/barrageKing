@@ -76,7 +76,7 @@ namespace Adohi
         }
 
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (!ViewPointManager.Instance.isViewChanging)
             {

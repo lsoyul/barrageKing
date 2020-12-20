@@ -70,7 +70,7 @@ namespace Adohi
                                 Push2D(lockOnBox, this.character.currentLocation.OptimalDirectionTo(lockOnBox.location));
                                 break;
                             case ViewPoint.threeDimensional:
-                                Push3D(lockOnBox, character.forwardVector);
+                                Push3D(lockOnBox, character.XZForward);
                                 break;
                         }
                     }
@@ -114,10 +114,37 @@ namespace Adohi
             isConstructing = true;
             await Jump(this.jumpHeight, duration);
             int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
-            if (Physics.Raycast(this.transform.position + jumpHeight * Vector3.up, Vector3.down, out var hitinfo, 100f, layerMask))
+            var isHit1 = Physics.Raycast(this.transform.position + jumpHeight * Vector3.up + (Vector3.down + Vector3.left) * 0.5f, Vector3.down, out var hitInfo1, 100f, layerMask);
+            var isHit2 = Physics.Raycast(this.transform.position + jumpHeight * Vector3.up + (Vector3.down + Vector3.right) * 0.5f, Vector3.down, out var hitInfo2, 100f, layerMask);
+            var isHit3 = Physics.Raycast(this.transform.position + jumpHeight * Vector3.up + (Vector3.down + Vector3.forward) * 0.5f, Vector3.down, out var hitInfo3, 100f, layerMask);
+            var isHit4 = Physics.Raycast(this.transform.position + jumpHeight * Vector3.up + (Vector3.down + Vector3.back) * 0.5f, Vector3.down, out var hitInfo4, 100f, layerMask);
+
+            var maxHeight = float.MinValue;
+            if (isHit1 || isHit2 || isHit3 || isHit4)
             {
+                "ishit".Log();
+                if (isHit1)
+                {
+                    maxHeight = maxHeight > hitInfo1.point.y ? maxHeight : hitInfo1.point.y;
+
+                }
+                if (isHit2)
+                {
+                    maxHeight = maxHeight > hitInfo2.point.y ? maxHeight : hitInfo2.point.y;
+
+                }
+                if (isHit3)
+                {
+                    maxHeight = maxHeight > hitInfo3.point.y ? maxHeight : hitInfo3.point.y;
+
+                }
+                if (isHit4)
+                {
+                    maxHeight = maxHeight > hitInfo4.point.y ? maxHeight : hitInfo4.point.y;
+                }
                 "Ground Hit".Log();
-                var targetPosition = hitinfo.point + 0.5f * Vector3.up;
+                var targetPosition = this.transform.position;
+                targetPosition.y = maxHeight + 0.51f;
                 var constructedBox = Instantiate(boxPrefab);
                 constructedBox.Construct3D(targetPosition);
                 MapManager.Instance.AddBox(constructedBox);
