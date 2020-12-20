@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using DigitalRuby.SoundManagerNamespace;
 using Pixelplacement;
 using Sirenix.OdinInspector;
 using System;
@@ -15,6 +16,8 @@ namespace Adohi
         [Button]
         private async UniTask PrepareGameTask()
         {
+            SoundManager.PlayLoopingMusic(SoundContainer.Instance().BackGroundMusicsDic["BGM_Stage1"], 1, 1, true);
+
             await MapManager.Instance.GenerateMap();
             await UniTask.Delay(1000);
             await CharacterManager.Instance.GenerateCharacter();

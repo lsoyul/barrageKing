@@ -9760,9 +9760,8 @@ GameObject:
   - component: {fileID: 3045341901652139738}
   - component: {fileID: 2922825893623516274}
   - component: {fileID: 3047541413751321656}
-  - component: {fileID: 3047541413751321657}
   - component: {fileID: 2921582005825391116}
-  - component: {fileID: -3594493396092238818}
+  - component: {fileID: -4134482626563953961}
   m_Layer: 0
   m_Name: ExplosionStone
   m_TagString: Untagged
@@ -14582,42 +14581,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3047541413751321657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3047541413751321658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3400526caf17eb94e8b9e06c166c8a35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage:
-    _usage: 0
-    _value: 50
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  onHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3047541413751321658}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!199 &2921582005825391116
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -14684,7 +14647,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &-3594493396092238818
+--- !u!114 &-4134482626563953961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14704,7 +14667,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   duration:
     _usage: 0
-    _value: 1
+    _value: -1
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

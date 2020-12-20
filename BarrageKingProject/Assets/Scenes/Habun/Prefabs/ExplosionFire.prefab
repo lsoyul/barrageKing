@@ -19500,16 +19500,15 @@ GameObject:
   - component: {fileID: 154700157247752053}
   - component: {fileID: 66361288200125905}
   - component: {fileID: 157323663519557521}
-  - component: {fileID: 157323663519557522}
   - component: {fileID: 67339850649037561}
-  - component: {fileID: 2448046241814135848}
+  - component: {fileID: 3993130012304128801}
   m_Layer: 0
   m_Name: ExplosionFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &154700157247752053
 Transform:
   m_ObjectHideFlags: 0
@@ -24322,42 +24321,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &157323663519557522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157323663519557535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3400526caf17eb94e8b9e06c166c8a35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage:
-    _usage: 0
-    _value: 50
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  onHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 157323663519557535}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!199 &67339850649037561
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -24424,7 +24387,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2448046241814135848
+--- !u!114 &3993130012304128801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24444,7 +24407,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   duration:
     _usage: 0
-    _value: 1
+    _value: -1
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

@@ -30,7 +30,6 @@ public class BulletBase : MonoBehaviour
     private float curTimer = 0;
     private Vector3 curVelocity = Vector3.zero;
 
-    private Vector3 tempVelocity = Vector3.zero;
 
     [SerializeField] private bool isFire = false;
     [SerializeField] private Vector3 initPosition = Vector3.zero;
@@ -110,14 +109,10 @@ public class BulletBase : MonoBehaviour
 
     public void OnViewChangedStartTo2D()
     {
-        tempVelocity = curVelocity;
-        curVelocity = Vector3.zero;
     }
 
     public void OnViewChangedStartTo3D()
     {
-        tempVelocity = curVelocity;
-        curVelocity = Vector3.zero;
     }
 
     public void OnViewChangedMiddleTo2D()
@@ -144,14 +139,12 @@ public class BulletBase : MonoBehaviour
     {
         viewChange2dEffect.Stop();
         viewChange2dEffect.gameObject.SetActive(false);
-        curVelocity = tempVelocity;
     }
 
     public void OnViewChangedEndTo3D()
     {
         viewChange3dEffect.Stop();
         viewChange3dEffect.gameObject.SetActive(false);
-        curVelocity = tempVelocity;
     }
 
 
@@ -163,16 +156,18 @@ public class BulletBase : MonoBehaviour
             
             curVelocity = this.transform.forward * speed;
 
-            this.transform.position += curVelocity * Time.deltaTime;
-
             if (ViewPointManager.Instance != null)
             {
                 if (ViewPointManager.Instance.isViewChanging == false)
+                {
+                    this.transform.position += curVelocity * Time.deltaTime;
                     curTimer += Time.deltaTime;
+                }
             }
             else
             {
-            curTimer += Time.deltaTime;
+                this.transform.position += curVelocity * Time.deltaTime;
+                curTimer += Time.deltaTime;
             }
 
             if (curTimer > maxLivingDuration

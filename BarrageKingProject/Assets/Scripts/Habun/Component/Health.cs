@@ -19,9 +19,9 @@ namespace Habun
         {
             if (hp.Value > 0.0f)
             {
-                hp.Value = Mathf.Min(0.0f, hp.Value - damage);
+                hp.Value = Mathf.Max(0.0f, hp.Value - damage);
 
-                if (hp.Value <= 0.0f)
+                if (Mathf.Approximately(hp.Value, 0.0f))
                 {
                     onDeath.Invoke(gameObject);
                 }

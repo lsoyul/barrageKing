@@ -1,4 +1,6 @@
-﻿using Sirenix.OdinInspector;
+﻿using Adohi;
+using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
@@ -7,18 +9,24 @@ namespace Habun
 {
     public class Wall : SerializedMonoBehaviour
     {
+        public GameStatics.BULLET_TYPE Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
         [SerializeField]
         private GameStatics.BULLET_TYPE type = GameStatics.BULLET_TYPE.NONE;
-        
-        [SerializeField, Space]
-        private IntUnityEvent onCounter;
 
-        [SerializeField, Space]
-        private Dictionary<GameStatics.BULLET_TYPE, int> counter = new Dictionary<GameStatics.BULLET_TYPE, int>();
         [SerializeField, Space]
         private Dictionary<GameStatics.BULLET_TYPE, Material> render = new Dictionary<GameStatics.BULLET_TYPE, Material>();
         [SerializeField, Space]
         private Dictionary<GameStatics.BULLET_TYPE, PoolObject> explosion = new Dictionary<GameStatics.BULLET_TYPE, PoolObject>();
+        [SerializeField, Space]
+        private Dictionary<GameStatics.BULLET_TYPE, int> counter = new Dictionary<GameStatics.BULLET_TYPE, int>();
+
+        [SerializeField, Space]
+        private IntUnityEvent onCounter;
 
         // PUBLIC METHODS: ----------------------------------------------------
 
@@ -45,7 +53,19 @@ namespace Habun
                 instance.transform.SetPositionAndRotation(transform.position, transform.rotation);
             }
 
-            gameObject.SetActive(false);
+            StartCoroutine(Destroy(0.2f));
+        }
+
+        private IEnumerator Destroy(float delay)
+        {
+            var damage = GetComponentInChildren<Damage>(true);
+            damage.gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(delay);
+            damage.gameObject.SetActive(false);
+
+            MapManager.Instance.RemoveBox(GetComponent<Box>());
+            Destroy(gameObject);
         }
 
         // PRIVATE METHODS: ----------------------------------------------------
@@ -72,8 +92,9 @@ namespace Habun
                 return;
             }
 
-            var meshRenderer = GetComponentInChildren<MeshRenderer>();
+            var meshRenderer = GetComponentInChildren<MeshRenderer>(true);
             meshRenderer.material = render[type];
+            
         }
 
     }
