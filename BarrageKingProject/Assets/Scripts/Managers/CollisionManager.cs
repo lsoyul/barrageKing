@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks.Triggers;
+using Habun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
@@ -47,6 +48,14 @@ public class CollisionManager : MonoSingleton<CollisionManager>
             }
             else if (targetObj.gameObject.layer == LayerMask.NameToLayer("Box"))
             {
+                Health boxHealth = targetObj.gameObject.GetComponentInParent<Health>();
+                Wall boxWall = targetObj.gameObject.GetComponentInParent<Wall>();
+
+                float damage = GameStatics.GetBulletDamage(bullet.bulletType);
+
+                boxHealth.Damage(damage);
+                boxWall.Count(bullet.bulletType);
+
                 // Bullet vs Box
                 if (bullet != null)
                 {
