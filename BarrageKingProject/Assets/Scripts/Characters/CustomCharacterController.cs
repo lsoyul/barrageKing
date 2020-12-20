@@ -21,14 +21,14 @@ namespace Adohi
         public Direction moveDirection2D;
 
         [Header("Move2D")]      
-        public bool is2DMoveAvailable;
-        public bool isMoving;
+        public bool isMove2DAvailable;
+        public bool isMoving2D;
         public int moveFrame;
         public float keyInputAvailableThreshold = 0.5f;
         public bool isKeyInputAvailable = true;
 
         [Header("Move3D")]
-        public bool isGround;
+        public bool isGround3D;
         public Vector3 currentVelocity;
         public float rotateSpeed = 10f;
         public float jumpPower = 5f;
@@ -84,7 +84,7 @@ namespace Adohi
                         SetDirection();
 
                     }
-                    if (is2DMoveAvailable && !isMoving)
+                    if (isMove2DAvailable && !isMoving2D)
                     {
                         if (moveDirection2D != Direction.None)
                         {
@@ -130,16 +130,16 @@ namespace Adohi
         {
             this.isKeyInputAvailable = false;
             this.moveDirection2D = Direction.None;
-            is2DMoveAvailable = false;
+            isMove2DAvailable = false;
             await MovePosition2DTask(nextLocation);
-            is2DMoveAvailable = true;
+            isMove2DAvailable = true;
             
         }
 
         public async UniTask MovePosition2DTask(Location location)
         {
             var startPosition = this.transform.position;
-            isMoving = true;
+            isMoving2D = true;
             for (int i = 0; i < moveFrame; i++)
             {
                 if ((float)(i + 1) / moveFrame > keyInputAvailableThreshold)
@@ -151,7 +151,7 @@ namespace Adohi
             }
             this.CurrentLocation = location;
             this.transform.position = location.ToVector();
-            isMoving = false;
+            isMoving2D = false;
         }
 
         public void Move3D()
@@ -173,7 +173,7 @@ namespace Adohi
             if (Input.GetKeyDown(KeyCode.F))
             {
                 "jump".Log();
-                if (this.isGround)
+                if (this.isGround3D)
                 {
                     this.currentVelocity.y = jumpPower;
                 }
@@ -182,7 +182,7 @@ namespace Adohi
 
         public void Gravity()
         {
-            if (!isGround)
+            if (!isGround3D)
             {
                 this.currentVelocity.y -= 9.8f * Time.deltaTime;
             }
@@ -196,12 +196,12 @@ namespace Adohi
         {
             if (Physics.Raycast(this.transform.position+Vector3.up, Vector3.down, out var hitinfo, rayDistance, 1 << LayerMask.NameToLayer("Ground")))
             {
-                this.isGround = true;
+                this.isGround3D = true;
                 this.transform.SetYPosition(hitinfo.point.y);
             }
             else
             {
-                this.isGround = false;
+                this.isGround3D = false;
             }
         }
 

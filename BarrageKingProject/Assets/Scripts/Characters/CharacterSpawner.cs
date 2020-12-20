@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿using Cysharp.Threading.Tasks;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSpawner : MonoBehaviour
+namespace Adohi
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CharacterSpawner : MonoBehaviour
     {
-        
+        public Character characterPrefab;
+
+        public async UniTask<Character> Spawn(Location location)
+        {
+            var character = Instantiate(characterPrefab);
+            character.currentLocation = location;
+            character.SyncPosition();
+            character.ConnectCamera();
+            return character;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
