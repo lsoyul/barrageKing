@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using DigitalRuby.SoundManagerNamespace;
 using PD.UnityEngineExtensions;
 using System.Collections;
 using System.Collections.Generic;
@@ -45,6 +46,7 @@ namespace Adohi
 
         public async UniTask StartOpeningTask()
         {
+            SoundManager.PlayLoopingMusic(SoundContainer.Instance().BackGroundMusicsDic["BGM_Opening"], 1, 1, true);
             await UniTask.Delay((firstDelay * 1000).ToInt());
             await UniTask.WhenAll
             (
