@@ -14896,8 +14896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
-    speed: 2
+  - delay: 0.4
+    speed: 4
     acceleration: 0
     bulletType: 4
 --- !u!1 &8746397966029737851
@@ -14944,7 +14944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GizmozColor: {r: 1, g: 0, b: 0, a: 1}
-  MaxRange: 5
+  MaxRange: 8
   MinRange: 0
   State:
     KeyReference: {fileID: 11400000, guid: 4b12fbeb5da71074c9030d52aef165e8, type: 2}
@@ -15074,8 +15074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
-    speed: 2
+  - delay: 0.4
+    speed: 4
     acceleration: 0
     bulletType: 4
 --- !u!1 &8746397966259439674
@@ -15287,7 +15287,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 10
+  duration: 5
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -15391,7 +15391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GizmozColor: {r: 0, g: 1, b: 0, a: 1}
   Angle: 360
-  Radius: 10
+  Radius: 12
   State:
     KeyReference: {fileID: 11400000, guid: 8df78e936451f7d4c988af69184a809b, type: 2}
     Concatenator: {fileID: 0}
@@ -15447,8 +15447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
-    speed: 2
+  - delay: 0.4
+    speed: 4
     acceleration: 0
     bulletType: 4
 --- !u!1 &8746397967154520985
@@ -15523,7 +15523,7 @@ MonoBehaviour:
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
   sensor: {fileID: 8746397966945269371}
-  moveDistance: 5
+  moveDistance: 8
   moveTime: 0.5
   timer: 0
 --- !u!1 &8746397967198947972
@@ -15640,8 +15640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
-    speed: 2
+  - delay: 0.4
+    speed: 4
     acceleration: 0
     bulletType: 4
 --- !u!1 &8746397967742944361
@@ -15794,6 +15794,6 @@ MonoBehaviour:
   AchievableEvaluationType: 0
   AbortEvaluatorType: 0
   sensor: {fileID: 8746397966945269371}
-  moveDistance: 5
-  moveSpeed: 5
+  moveDistance: 8
+  moveSpeed: 4
   lerpDelta: 2
