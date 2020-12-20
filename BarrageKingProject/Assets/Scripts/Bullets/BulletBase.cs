@@ -6,6 +6,7 @@ using UnityEditor.Rendering;
 using NUnit.Framework.Constraints;
 using Adohi;
 using Sirenix.OdinInspector.Editor;
+using MoreLinq.Extensions;
 
 public class BulletBase : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class BulletBase : MonoBehaviour
 
     public Action<BulletBase> onDestroy;
 
+    public Action<GameObject, Collider> onCollision;
+    bool isCheckCollide = true;
+
     public Vector3 GetDirection()
     {
         return this.transform.forward;
@@ -50,15 +54,8 @@ public class BulletBase : MonoBehaviour
         this.acceleration = acceleration;
 
         Vector3 lookAtPoint = this.transform.position;
-        lookAtPoint += direction.normalized;
-
-        this.transform.LookAt(lookAtPoint);
-
-        this.curVelocity = this.transform.forward * speed;
-        this.curTimer = 0;
-        this.initPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-
-        this.isFire = true;
+        Vector3 directionVec = Vector3.zero;
+        directionVec = direction.normalized;
 
         if (ViewPointManager.Instance != null)
         {
@@ -70,11 +67,28 @@ public class BulletBase : MonoBehaviour
             ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
 
             SetObjectDimensional();
+
+            if (ViewPointManager.Instance.currentViewPoint == ViewPoint.twoDimensional)
+            {
+                directionVec.y = 0;
+            }
         }
 
+        lookAtPoint += directionVec;
+
+        this.transform.LookAt(lookAtPoint);
+
+        this.curVelocity = this.transform.forward * speed;
+        this.curTimer = 0;
+        this.initPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+
+        this.isFire = true;
+
+        
         viewChange2dEffect.gameObject.SetActive(false);
         viewChange3dEffect.gameObject.SetActive(false);
 
+        isCheckCollide = true;
     }
 
     void SetObjectDimensional()
@@ -158,7 +172,7 @@ public class BulletBase : MonoBehaviour
             }
             else
             {
-                curTimer += Time.deltaTime;
+            curTimer += Time.deltaTime;
             }
 
             if (curTimer > maxLivingDuration
@@ -172,9 +186,10 @@ public class BulletBase : MonoBehaviour
     }
 
 
-    void OnDestroyBullet()
+    public void OnDestroyBullet()
     {
         isFire = false;
+        isCheckCollide = false;
 
         if (ViewPointManager.Instance != null)
         {
@@ -197,4 +212,17 @@ public class BulletBase : MonoBehaviour
             if (onDestroy != null) onDestroy(this);
         }
     }
+
+    public void SetIsCheckCollide(bool isCheck)
+    {
+        this.isCheckCollide = isCheck;
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (isCheckCollide)
+            onCollision?.Invoke(this.gameObject, other);
+    }
+
 }

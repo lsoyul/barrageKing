@@ -23,6 +23,16 @@ namespace Habun
             return base.PrePerform();
         }
 
+        public override EActionStatus Perform()
+        {
+            if (AgentData.Target)
+            {
+                AgentData.Agent.transform.forward = AgentData.DirectionToTarget;
+            }
+
+            return base.Perform();
+        }
+
         public override bool PostPerform()
         {
             foreach (var bullet in bullets)

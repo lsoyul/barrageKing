@@ -20,7 +20,9 @@ namespace Habun
             if ((mask.value & (1 << collider.gameObject.layer)) > 0)
             {
                 var health = collider.GetComponent<Health>();
-                health.Damage(damage.Value);
+                if (health) health.Damage(damage.Value);
+
+                onHit.Invoke(collider);
             }
         }
 
@@ -33,7 +35,7 @@ namespace Habun
                 return;
             }
 
-            onHit.Invoke(collider);
+            Hit(collider);
         }
 
     }
