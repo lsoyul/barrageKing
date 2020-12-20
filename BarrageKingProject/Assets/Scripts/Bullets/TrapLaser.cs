@@ -60,4 +60,8 @@ public class TrapLaser : MonoBehaviour
         tweener.DOPlay();
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
 }

@@ -16,28 +16,37 @@ public class CollisionManager : MonoSingleton<CollisionManager>
 
     public void OnCollideWithObject(GameObject detectedObj, Collider targetObj)
     {
-        if (detectedObj.CompareTag("Bullet"))
+        if (detectedObj.layer == LayerMask.NameToLayer("Bullet"))
         {
-            if (targetObj.gameObject.CompareTag("Wall"))
+            BulletBase bullet = detectedObj.gameObject.GetComponentInParent<BulletBase>();
+
+            if (targetObj.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
             {
-                // - Bullet vs Wall
-                BulletBase bullet = detectedObj.gameObject.GetComponentInParent<BulletBase>();
+                // Bullet vs Wall
                 if (bullet != null)
                 {
                     // remove bullet
                     bullet.OnDestroyBullet();
                 }
             }
-            else if (targetObj.gameObject.CompareTag("Player"))
+            else if (targetObj.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                // - Player vs Bullet
-                BulletBase bullet = detectedObj.gameObject.GetComponentInParent<BulletBase>();
+                // Bullet vs Player
 
                 if (bullet != null)
                 {
                     // player damaged
                     float damage = GameStatics.GetBulletDamage(bullet.bulletType);
 
+                    // remove bullet
+                    bullet.OnDestroyBullet();
+                }
+            }
+            else if (targetObj.gameObject.layer == LayerMask.NameToLayer("Box"))
+            {
+                // Bullet vs Box
+                if (bullet != null)
+                {
                     // remove bullet
                     bullet.OnDestroyBullet();
                 }

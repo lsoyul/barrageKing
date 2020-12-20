@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8285351665079701838}
   - component: {fileID: 8208522468659087376}
   - component: {fileID: 8801840928415215565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 1770702007796849190}
   - component: {fileID: 1770702007796849189}
   - component: {fileID: 1770702007796849188}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NatureEnchant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9782,7 +9782,7 @@ GameObject:
   - component: {fileID: 2568504677706109724}
   - component: {fileID: 2407223973019870830}
   - component: {fileID: 2407680672033669286}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14706,7 +14706,7 @@ GameObject:
   - component: {fileID: 8831795945203437489}
   - component: {fileID: 7856569168032244}
   - component: {fileID: 475680379190663799}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19585,7 +19585,7 @@ GameObject:
   - component: {fileID: 2829881790757703785}
   - component: {fileID: 2708160615697660113}
   - component: {fileID: 2706752596981836371}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24455,7 +24455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6064161352545194997}
   - component: {fileID: 8679089415805371258}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: collider2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24500,7 +24500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208123340511927253}
   - component: {fileID: 5634829614826406789}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: collider3d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24543,7 +24543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5322912419569272244}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24578,7 +24578,7 @@ GameObject:
   - component: {fileID: 5322912419915190193}
   - component: {fileID: 5322912419915190192}
   - component: {fileID: 5122249183276811389}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet_Stone
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -24652,7 +24652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5322912420309360474}
   - component: {fileID: 5322912420309360475}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24735,7 +24735,7 @@ GameObject:
   - component: {fileID: 8112440067463265388}
   - component: {fileID: 8239943857515679532}
   - component: {fileID: 8239733462138935558}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RingNova
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29632,7 +29632,7 @@ GameObject:
   - component: {fileID: 8109320819595674552}
   - component: {fileID: 8225216975122302504}
   - component: {fileID: 8239799771008466422}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34511,7 +34511,7 @@ GameObject:
   - component: {fileID: 8112522256720435118}
   - component: {fileID: 8240211030261154844}
   - component: {fileID: 8239639999148221572}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39435,7 +39435,7 @@ GameObject:
   - component: {fileID: 8109599407751914362}
   - component: {fileID: 8240299752444772620}
   - component: {fileID: 8241484206880506790}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HorizontalGlowRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44350,7 +44350,7 @@ GameObject:
   - component: {fileID: 8109550539829050522}
   - component: {fileID: 8225200868258351164}
   - component: {fileID: 8239674703120936696}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: VerticalGlowRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49220,7 +49220,7 @@ GameObject:
   - component: {fileID: 8112297966925428138}
   - component: {fileID: 8225234777970162220}
   - component: {fileID: 8241132227514004266}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterSphereGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54090,7 +54090,7 @@ GameObject:
   - component: {fileID: 8112351955219147928}
   - component: {fileID: 8240271007089491764}
   - component: {fileID: 8239861907484338988}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnergyNovaGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58976,7 +58976,7 @@ GameObject:
   - component: {fileID: 8150429975838419809}
   - component: {fileID: 8344639294171539793}
   - component: {fileID: 8343423178542718879}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 3d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63869,7 +63869,7 @@ GameObject:
   - component: {fileID: 8143443564156719195}
   - component: {fileID: 8344259008209304395}
   - component: {fileID: 8342941017358642003}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SparkTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68739,7 +68739,7 @@ GameObject:
   - component: {fileID: 8150902087001426767}
   - component: {fileID: 8344397731818431479}
   - component: {fileID: 8342989884616061301}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SolidTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
