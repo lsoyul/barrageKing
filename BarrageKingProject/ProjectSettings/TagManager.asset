@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Collide
   - Bullet
-  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,14 +15,9 @@ TagManager:
   - 
   - 
   - Player
-<<<<<<< HEAD
   - Ground
   - Obstacle
-=======
-  - Enemy
-  - 
->>>>>>> main
-  - 
+  - Box
   - 
   - 
   - 
