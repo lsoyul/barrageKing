@@ -1,4 +1,5 @@
-﻿using SGoap;
+﻿using Adohi;
+using SGoap;
 using UnityEngine;
 
 namespace Habun
@@ -10,12 +11,28 @@ namespace Habun
         [Effect]
         public State State;
 
-        private void Update()
+        private void OnEnable()
         {
-            if (Camera.main.orthographic)
-                _agentData.Agent.States.SetState(State.Key, 1);
-            else
-                _agentData.Agent.States.RemoveState(State.Key);
+            ViewPointManager.Instance.OnViewChangedEndTo2D += OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D += OnViewChangedEndTo3D;
+        }
+
+        private void OnDisable()
+        {
+            ViewPointManager.Instance.OnViewChangedEndTo2D -= OnViewChangedEndTo2D;
+            ViewPointManager.Instance.OnViewChangedEndTo3D -= OnViewChangedEndTo3D;
+        }
+
+        private void OnViewChangedEndTo2D()
+        {
+            _agentData.Agent.States.SetState(State.Key, 1);
+            _agentData.Agent.AbortPlan();
+        }
+
+        private void OnViewChangedEndTo3D()
+        {
+            _agentData.Agent.States.RemoveState(State.Key);
+            _agentData.Agent.AbortPlan();
         }
 
         public void Bind(AgentBasicData data)
