@@ -19629,7 +19629,7 @@ GameObject:
   - component: {fileID: -6890406210863161549}
   - component: {fileID: 6058953332888567749}
   - component: {fileID: 7278461131373147733}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EnemySpikyLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19736,13 +19736,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp:
     _usage: 0
-    _value: 50
+    _value: 0
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
   maxHp:
     _usage: 0
-    _value: 0
+    _value: 50
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

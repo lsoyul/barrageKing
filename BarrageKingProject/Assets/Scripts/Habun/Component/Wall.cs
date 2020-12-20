@@ -58,7 +58,7 @@ namespace Habun
 
         private IEnumerator Destroy(float delay)
         {
-            var damage = GetComponentInChildren<Damage>();
+            var damage = GetComponentInChildren<Damage>(true);
             damage.gameObject.SetActive(true);
 
             yield return new WaitForSeconds(delay);
@@ -92,13 +92,9 @@ namespace Habun
                 return;
             }
 
-            var meshRenderer = GetComponentInChildren<MeshRenderer>();
+            var meshRenderer = GetComponentInChildren<MeshRenderer>(true);
             meshRenderer.material = render[type];
-        }
-
-        private void Start()
-        {
-            Count(GameStatics.BULLET_TYPE.FIRE);
+            
         }
 
     }
