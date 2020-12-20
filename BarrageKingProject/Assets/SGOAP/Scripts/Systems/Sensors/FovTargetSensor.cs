@@ -7,8 +7,8 @@ namespace SGoap
         public Color GizmozColor = Color.red;
 
         [Range(0, 360)]
-        public float Angle = 60;
-        public float Radius = 20;
+        public float Angle = 360;
+        public float Radius = 10;
 
         [Effect]
         public State State;
@@ -22,15 +22,14 @@ namespace SGoap
 
         private void Update()
         {
-            if (Target != null)
-                return;
+            Target = null;
 
             FindTargetWithinSight();
         }
 
         private void LateUpdate()
         {
-            if (Target != null)
+            if (HasTarget)
                 _agentData.Agent.States.SetState(State.Key, 1);
             else
                 _agentData.Agent.States.RemoveState(State.Key);
@@ -50,8 +49,7 @@ namespace SGoap
 
                 if (WithinSight(target.transform))
                 {
-                    Target = target;
-                    SetTarget(Target);
+                    SetTarget(target);
                     break;
                 }
             }

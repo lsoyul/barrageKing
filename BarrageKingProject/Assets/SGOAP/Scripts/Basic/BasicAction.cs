@@ -17,7 +17,7 @@
             return true;
         }
 
-        public void Bind(AgentBasicData data)
+        public virtual void Bind(AgentBasicData data)
         {
             AgentData = data;
         }
