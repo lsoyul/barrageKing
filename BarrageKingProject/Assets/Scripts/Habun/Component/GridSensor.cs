@@ -38,6 +38,7 @@ namespace Habun
         public void Bind(AgentBasicData data)
         {
             _agentData = data;
+            _agentData.Agent.States.SetState(State.Key, 1);
         }
 
     }

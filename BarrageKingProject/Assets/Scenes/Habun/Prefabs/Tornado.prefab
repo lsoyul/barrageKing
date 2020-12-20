@@ -30,7 +30,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3327246116976983553}
-  - {fileID: 9097285388148484864}
   - {fileID: 186109006492108197}
   - {fileID: 186109007045282321}
   m_Father: {fileID: 0}
@@ -106,7 +105,7 @@ Transform:
   - {fileID: 433446664483103603}
   - {fileID: 186109006695233317}
   m_Father: {fileID: 186109005689099815}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186109006695233316
 GameObject:
@@ -207,7 +206,7 @@ Transform:
   m_Children:
   - {fileID: 3713931574393922925}
   m_Father: {fileID: 186109005689099815}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3330595006378596535
 GameObject:
@@ -10025,7 +10024,7 @@ GameObject:
   - component: {fileID: 3241682875099262571}
   - component: {fileID: 3241233906293162831}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Tornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24774,33 +24773,3 @@ MonoBehaviour:
   moveTarget: {fileID: 0}
   moveSpeed: 4
   lerpDelta: 8
---- !u!1 &5474817379696653722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9097285388148484864}
-  m_Layer: 0
-  m_Name: Shooter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9097285388148484864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5474817379696653722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 186109005689099815}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

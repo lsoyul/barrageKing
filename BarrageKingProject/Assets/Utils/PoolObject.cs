@@ -11,6 +11,10 @@ namespace Habun
         [SerializeField]
         private FloatReference duration;
 
+        // VARIABLES: ---------------------------------------------------------
+
+        private IEnumerator coroutine;
+
         // PROPERTIES: ---------------------------------------------------------
 
         public int InitCount
@@ -18,10 +22,6 @@ namespace Habun
             get { return initCount.Value; }
             set { initCount.Value = value; }
         }
-
-        // VARIABLES: ---------------------------------------------------------
-
-        private IEnumerator coroutine;
 
         // PRIVATE METHODS: ----------------------------------------------------
 
