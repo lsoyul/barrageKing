@@ -22,6 +22,8 @@ namespace Adohi
         //public ReactiveProperty<Location> locationProperty;
         public float remainPower;
         public float remainDuration;
+        public bool isGround3D;
+        public float velocityY;
         public bool IsPushing { get => remainPower > 0f || remainDuration > 0f; }
         private void Start()
         {
@@ -31,6 +33,17 @@ namespace Adohi
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += To3DMiddle;
             ViewPointManager.Instance.OnViewChangedEndTo3D += To3DEnd;
         }
+
+        private void Update()
+        {
+            if (!ViewPointManager.Instance.isViewChanging && ViewPointManager.Instance.currentViewPoint == ViewPoint.threeDimensional)
+            {
+                CheckGround(0.6f);
+                Gravity();
+                this.transform.position += Vector3.up * velocityY * Time.deltaTime;
+            }
+        }
+
         public void Construct2D(Location location)
         {
             this.location = location;
@@ -79,11 +92,37 @@ namespace Adohi
         {
             model3D.gameObject.SetActive(true);
             int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
-            var isHit = Physics.Raycast(this.location.ToVector() + Vector3.up * 100f, Vector3.down, out var hitinfo, 200f, layerMask);
-            if (isHit)
+            var isHit1 = Physics.Raycast(this.transform.position + Vector3.left * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo1, 100f, layerMask);
+            var isHit2 = Physics.Raycast(this.transform.position + Vector3.right * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo2, 100f, layerMask);
+            var isHit3 = Physics.Raycast(this.transform.position + Vector3.forward * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo3, 100f, layerMask);
+            var isHit4 = Physics.Raycast(this.transform.position + Vector3.back * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo4, 100f, layerMask);
+
+            var maxHeight = float.MinValue;
+            if (isHit1 || isHit2 || isHit3 || isHit4)
             {
-                var height = hitinfo.point.y;
-                this.transform.position = this.location.ToVector() + Vector3.up * (height + 0.5f);
+                "ishit".Log();
+                if (isHit1)
+                {
+                    maxHeight = maxHeight > hitInfo1.point.y ? maxHeight : hitInfo1.point.y;
+
+                }
+                if (isHit2)
+                {
+                    maxHeight = maxHeight > hitInfo2.point.y ? maxHeight : hitInfo2.point.y;
+
+                }
+                if (isHit3)
+                {
+                    maxHeight = maxHeight > hitInfo3.point.y ? maxHeight : hitInfo3.point.y;
+
+                }
+                if (isHit4)
+                {
+                    maxHeight = maxHeight > hitInfo4.point.y ? maxHeight : hitInfo4.point.y;
+
+                }
+                this.isGround3D = true;
+                this.transform.SetYPosition(maxHeight + 0.51f);
             }
         }
 
@@ -171,6 +210,57 @@ namespace Adohi
             }
         }
 
+        public void CheckGround(float rayDistance)
+        {
+            int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
+            var isHit1 = Physics.Raycast(this.transform.position + (Vector3.down + Vector3.left) * 0.5f, Vector3.down, out var hitInfo1, 0.2f, layerMask);
+            var isHit2 = Physics.Raycast(this.transform.position + (Vector3.down + Vector3.right) * 0.5f, Vector3.down, out var hitInfo2, 0.2f, layerMask);
+            var isHit3 = Physics.Raycast(this.transform.position + (Vector3.down + Vector3.forward) * 0.5f, Vector3.down, out var hitInfo3, 0.2f, layerMask);
+            var isHit4 = Physics.Raycast(this.transform.position + (Vector3.down + Vector3.back) * 0.5f, Vector3.down, out var hitInfo4, 0.2f, layerMask);
+
+            var maxHeight = float.MinValue;
+            if (isHit1 || isHit2 || isHit3 || isHit4)
+            {
+                "ishit".Log();
+                if (isHit1)
+                {
+                    maxHeight = maxHeight > hitInfo1.point.y ? maxHeight : hitInfo1.point.y;
+
+                }
+                if (isHit2)
+                {
+                    maxHeight = maxHeight > hitInfo2.point.y ? maxHeight : hitInfo2.point.y;
+
+                }
+                if (isHit3)
+                {
+                    maxHeight = maxHeight > hitInfo3.point.y ? maxHeight : hitInfo3.point.y;
+
+                }
+                if (isHit4)
+                {
+                    maxHeight = maxHeight > hitInfo4.point.y ? maxHeight : hitInfo4.point.y;
+
+                }
+                this.isGround3D = true;
+                this.transform.SetYPosition(maxHeight + 0.51f);
+            }
+            else
+            {
+                this.isGround3D = false;
+            }
+        }
+        public void Gravity()
+        {
+            if (!isGround3D)
+            {
+                velocityY -= 9.8f * Time.deltaTime;
+            }
+            else
+            {
+                velocityY = 0f;
+            }
+        }
 
     }
 

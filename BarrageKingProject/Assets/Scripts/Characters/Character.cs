@@ -9,6 +9,7 @@ namespace Adohi
     public class Character : MonoBehaviour
     {
         private Vector3 currentRotation;
+        private Rigidbody rb;
 
         [Header("Components")]
         public CustomCharacterController characterController;
@@ -40,6 +41,7 @@ namespace Adohi
             this.characterController = GetComponent<CustomCharacterController>();
             this.boxController = GetComponent<BoxController>();
             this.status = GetComponent<CharacterStatus>();
+            this.rb = GetComponent<Rigidbody>();
         }
 
         private void Start()
@@ -67,7 +69,7 @@ namespace Adohi
         {
             currentRotation.x += Input.GetAxis("Mouse X") * sensitivity;
             currentRotation.y -= Input.GetAxis("Mouse Y") * sensitivity;
-            currentRotation.x = Mathf.Repeat(currentRotation.x, 360);
+            currentRotation.x = Mathf.Repeat(currentRotation.x, 360f);
             currentRotation.y = Mathf.Clamp(currentRotation.y, minYAngle, maxYAngle);
             this.forwardVector = Quaternion.Euler(currentRotation.y, currentRotation.x, 0) * Vector3.forward;
         }
@@ -94,10 +96,12 @@ namespace Adohi
                 case ViewPoint.twoDimensional:
                     this.model2D.SetActive(true);
                     this.model3D.SetActive(false);
+                    rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
                     break;
                 case ViewPoint.threeDimensional:
                     this.model2D.SetActive(false);
                     this.model3D.SetActive(true);
+                    rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
                     break;
             }
         }
