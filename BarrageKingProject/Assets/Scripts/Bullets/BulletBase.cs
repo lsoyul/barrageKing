@@ -23,12 +23,13 @@ public class BulletBase : MonoBehaviour
     public ParticleSystem viewChange2dEffect;
     public ParticleSystem viewChange3dEffect;
 
-    int currentView = 3;
 
     public List<TrailRenderer> trailRenderer;
 
     private float curTimer = 0;
     private Vector3 curVelocity = Vector3.zero;
+
+    private Vector3 tempVelocity = Vector3.zero;
 
     [SerializeField] private bool isFire = false;
     [SerializeField] private Vector3 initPosition = Vector3.zero;
@@ -95,11 +96,14 @@ public class BulletBase : MonoBehaviour
 
     public void OnViewChangedStartTo2D()
     {
+        tempVelocity = curVelocity;
+        curVelocity = Vector3.zero;
     }
 
     public void OnViewChangedStartTo3D()
     {
-
+        tempVelocity = curVelocity;
+        curVelocity = Vector3.zero;
     }
 
     public void OnViewChangedMiddleTo2D()
@@ -119,18 +123,21 @@ public class BulletBase : MonoBehaviour
 
         viewChange3dEffect.gameObject.SetActive(true);
         viewChange3dEffect.Play();
+
     }
 
     public void OnViewChangedEndTo2D()
     {
         viewChange2dEffect.Stop();
         viewChange2dEffect.gameObject.SetActive(false);
+        curVelocity = tempVelocity;
     }
 
     public void OnViewChangedEndTo3D()
     {
         viewChange3dEffect.Stop();
         viewChange3dEffect.gameObject.SetActive(false);
+        curVelocity = tempVelocity;
     }
 
 
@@ -144,7 +151,15 @@ public class BulletBase : MonoBehaviour
 
             this.transform.position += curVelocity * Time.deltaTime;
 
-            curTimer += Time.deltaTime;
+            if (ViewPointManager.Instance != null)
+            {
+                if (ViewPointManager.Instance.isViewChanging == false)
+                    curTimer += Time.deltaTime;
+            }
+            else
+            {
+                curTimer += Time.deltaTime;
+            }
 
             if (curTimer > maxLivingDuration
                 || Vector3.Distance(this.gameObject.transform.position, this.initPosition) > maxLivingDistance)
