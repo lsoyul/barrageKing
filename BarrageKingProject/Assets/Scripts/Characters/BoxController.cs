@@ -181,7 +181,11 @@ namespace Adohi
         void Push2D(Box box, Direction direction)
         {
             //box.Push2DTask(this.pushPower.ToInt(), this.pushDuration, this.character.currentLocation.OptimalDirectionTo(box.location));
-            box.Push2DTask(this.pushPower.ToInt(), this.pushDuration, direction);
+            if (box)
+            {
+                box.Push2DTask(this.pushPower.ToInt(), this.pushDuration, direction);
+
+            }
         }
 
 
@@ -200,7 +204,10 @@ namespace Adohi
 
         void Push3D(Box box, Vector3 pushDirectionVector)
         {
-            box.Push3DTask(pushPower, pushDuration, pushDirectionVector);
+            if (box)
+            {
+                box.Push3DTask(pushPower, pushDuration, pushDirectionVector);
+            }
         }
 
         public bool ConstuctAvailable()
