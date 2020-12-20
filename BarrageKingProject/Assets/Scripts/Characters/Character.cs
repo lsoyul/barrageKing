@@ -76,7 +76,8 @@ namespace Adohi
 
         public void Rotate3DStart()
         {
-            currentRotation = alignDirection.ToRotation().eulerAngles;
+            currentRotation = this.transform.rotation.eulerAngles;
+            currentRotation.Log(" rotation");
         }
 
         public void SyncPosition()
@@ -102,6 +103,8 @@ namespace Adohi
                     this.model2D.SetActive(false);
                     this.model3D.SetActive(true);
                     rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+                    this.transform.rotation = this.alignDirection.ToRotation();
+                    this.forwardVector = this.transform.rotation * Vector3.forward;
                     break;
             }
         }

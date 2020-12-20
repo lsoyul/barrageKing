@@ -55,12 +55,16 @@ namespace Adohi
             this.location = location;
             this.transform.position = location.ToVector();
             model2D.gameObject.SetActive(true);
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+
         }
 
         public void Construct3D(Vector3 position)
         {
             this.transform.position = position;
             model3D.gameObject.SetActive(true);
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+
         }
 
         public void To2DStart()
@@ -72,7 +76,8 @@ namespace Adohi
         public void To2DMiddle()
         {
             model2D.gameObject.SetActive(true);
-            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+
 
             this.location = new Location(this.transform.position.x.RoundToInt(), this.transform.position.z.RoundToInt(), 0);
             this.transform.position = location.ToVector();
@@ -97,7 +102,7 @@ namespace Adohi
         public void To3DMiddle()
         {
             model3D.gameObject.SetActive(true);
-            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 
             int layerMask = LayerMask.GetMask("Ground", "Obstacle", "Box");
             var isHit1 = Physics.Raycast(this.transform.position + Vector3.left * 0.5f + Vector3.up * 20f, Vector3.down, out var hitInfo1, 100f, layerMask);

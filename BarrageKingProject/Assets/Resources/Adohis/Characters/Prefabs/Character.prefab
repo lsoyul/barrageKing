@@ -186,9 +186,9 @@ MonoBehaviour:
   isKeyInputAvailable: 1
   isGround3D: 0
   currentVelocity: {x: 0, y: 0, z: 0}
-  rotateSpeed: 10
+  rotateSpeed: 5
   jumpPower: 5
-  speed: 10
+  speed: 5
 --- !u!54 &909296911
 Rigidbody:
   m_ObjectHideFlags: 0

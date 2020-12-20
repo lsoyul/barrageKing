@@ -66,6 +66,8 @@ namespace Adohi
         private void Start()
         {
             IngameTaskManager.Instance.OnStartGame += () => this.isMoveAvailable = true;
+            ViewPointManager.Instance.OnViewChangedStartTo3D += () => To3DViewStart();
+
             ViewPointManager.Instance.OnViewChangedMiddleTo2D += () => To2DViewMiddle();
             ViewPointManager.Instance.OnViewChangedMiddleTo3D += () => To3DViewMiddle();
             ViewPointManager.Instance.OnViewChangedEndTo2D += () => To2DViewEnd();
@@ -110,7 +112,11 @@ namespace Adohi
                 {
                     CheckGround(1.01f);
                     Gravity();
-                    Jump3D();
+                    if (!character.boxController.isConstructing)
+                    {
+                        Jump3D();
+ 
+                    }
                     Move3D();
                     this.transform.position += this.currentVelocity * Time.deltaTime;
                 }
@@ -166,6 +172,10 @@ namespace Adohi
         public void Move3D()
         {
             var directionVector = CalculateDirectionVector();
+            if (character.boxController.isConstructing)
+            {
+                directionVector = Vector3.zero;
+            }
             Set3DMoveAnimation(directionVector);
             var yAngle = Vector3.SignedAngle(Vector3.forward, character.XZForward, Vector3.up);
             var moveVector = Quaternion.Euler(0f, yAngle, 0f) * directionVector;
@@ -255,11 +265,18 @@ namespace Adohi
             CurrentLocation = new Location(this.transform.position.x.Round(), this.transform.position.z.Round(), 0);
             this.transform.position = CurrentLocation.ToVector();
             this.character.alignDirection = this.character.XZForward.ToDirection();
+            this.character.XZForward.Log();
+            this.character.XZForward.ToDirection().Log();
             this.transform.rotation = Quaternion.identity;
         }
 
         public void To2DViewEnd()
         {
+        }
+
+        public void To3DViewStart()
+        {
+            this.character.forwardVector = character.alignDirection.ToVector();
         }
 
         public void To3DViewMiddle()
