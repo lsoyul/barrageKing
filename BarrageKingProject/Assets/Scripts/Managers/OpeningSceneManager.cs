@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Adohi
 {
@@ -34,7 +35,8 @@ namespace Adohi
         public float fourthDelay;
         public float fourthrotateDuration;
 
-
+        public KeyCode pressKey = KeyCode.Space;
+        public string nextScene = "GameScene";
         private void Start()
         {
             openingCamera.backgroundColor = firstColor;
@@ -66,6 +68,9 @@ namespace Adohi
                 MoveObject(title.gameObject, finalTitlePosition, fourthrotateDuration)
             );
             press.gameObject.SetActive(true);
+
+            await UniTask.WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            await SceneManager.LoadSceneAsync(nextScene);
         }
 
         public async UniTask MoveObject(GameObject gameObject, Vector3 position, float duration)

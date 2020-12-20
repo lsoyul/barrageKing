@@ -13,6 +13,11 @@ namespace Adohi
     {
         public event Action OnStartGame;
 
+        private void Start()
+        {
+            PrepareGameTask();
+        }
+
         [Button]
         private async UniTask PrepareGameTask()
         {
@@ -27,9 +32,7 @@ namespace Adohi
 
         private async UniTask StartGameTask()
         {
-
             OnStartGame?.Invoke();
-
         }
     }
 

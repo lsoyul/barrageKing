@@ -261,6 +261,8 @@ MonoBehaviour:
   thirdDelay: 1
   fourthDelay: 1
   fourthrotateDuration: 1.5
+  pressKey: 32
+  nextScene: GameScene
 --- !u!4 &438063350
 Transform:
   m_ObjectHideFlags: 0
