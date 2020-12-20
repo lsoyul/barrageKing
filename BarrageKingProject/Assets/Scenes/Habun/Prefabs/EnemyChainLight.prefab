@@ -24664,13 +24664,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8712977283884887021}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8712977284454178835}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!114 &8712977283884887011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24685,59 +24685,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
+  - delay: 1.2
     speed: 2
     acceleration: 0
-    bulletType: 2
---- !u!1 &8712977284062915612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8712977284062915603}
-  - component: {fileID: 8712977284062915602}
-  m_Layer: 0
-  m_Name: Directional
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8712977284062915603
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8712977284062915612}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8712977284454178835}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!114 &8712977284062915602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8712977284062915612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d12b54a29eef9d9479256dc3465ee4bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoStart: 0
-  patternList:
-  - delay: 0.4
-    speed: 2
-    acceleration: 0
-    bulletType: 3
+    bulletType: 4
 --- !u!1 &8712977284361029508
 GameObject:
   m_ObjectHideFlags: 0
@@ -24830,7 +24781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8712977284441158043
 Transform:
   m_ObjectHideFlags: 0
@@ -24838,13 +24789,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8712977284441158020}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8712977284454178835}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!114 &8712977284441158042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24859,10 +24810,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0.4
+  - delay: 1.2
     speed: 2
     acceleration: 0
-    bulletType: 3
+    bulletType: 4
 --- !u!1 &8712977284454178844
 GameObject:
   m_ObjectHideFlags: 0
@@ -24894,7 +24845,6 @@ Transform:
   - {fileID: 8712977284667690661}
   - {fileID: 8712977284441158043}
   - {fileID: 8712977283884887020}
-  - {fileID: 8712977284062915603}
   m_Father: {fileID: 8712977285159644863}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24977,7 +24927,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
-  isActive: 1
+  isActive: 0
   isValid: 1
   target: {fileID: 8712977284454178835}
   animationType: 4
@@ -25120,10 +25070,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   patternList:
-  - delay: 0
+  - delay: 1.2
     speed: 2
     acceleration: 0
-    bulletType: 1
+    bulletType: 4
 --- !u!1 &8712977284718846475
 GameObject:
   m_ObjectHideFlags: 0
@@ -25291,6 +25241,9 @@ GameObject:
   - component: {fileID: 8712977285159644863}
   - component: {fileID: 8712977285159644856}
   - component: {fileID: 8712977285159644862}
+  - component: {fileID: 2364872025368610679}
+  - component: {fileID: 5624421223725560769}
+  - component: {fileID: -6546073588727433937}
   m_Layer: 0
   m_Name: EnemyChainLight
   m_TagString: Untagged
@@ -25363,3 +25316,73 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2364872025368610679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712977285159644857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1067564b3c709d94bba5ed15389c1019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp:
+    _usage: 0
+    _value: 50
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  maxHp:
+    _usage: 0
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5624421223725560769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712977285159644857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268bf344d165f094898f0e5f68a17110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observer:
+    _usage: 0
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  observerList: {fileID: 11400000, guid: a06307a8173ee034288e7fd495ef787b, type: 2}
+--- !u!114 &-6546073588727433937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712977285159644857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09569e8d8e6b84aba852e6dcbe52d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initCount:
+    _usage: 0
+    _value: 5
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  duration:
+    _usage: 0
+    _value: -1
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}

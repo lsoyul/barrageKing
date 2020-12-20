@@ -7,8 +7,9 @@ namespace Habun
 {
     public class EnemyAttack2D : BasicAction
     {
-        public override float CooldownTime => 1.0f;
-        public override float StaggerTime => 0.5f;
+        public override bool CanAbort() => TimeElapsed > 2.0f;
+        public override float CooldownTime => 4.0f;
+        public override float StaggerTime => 4.0f;
 
         [SerializeField]
         private List<BulletShooter> bullets;
@@ -30,7 +31,7 @@ namespace Habun
                 AgentData.Agent.transform.forward = AgentData.DirectionToTarget;
             }
 
-            return base.Perform();
+            return CanAbort() ? EActionStatus.Success : EActionStatus.Running;
         }
 
         public override bool PostPerform()

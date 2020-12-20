@@ -1,4 +1,6 @@
-﻿using Sirenix.OdinInspector;
+﻿using Adohi;
+using PD.UnityEngineExtensions;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
@@ -33,6 +35,11 @@ namespace Habun
 
         // PUBLIC METHODS: ----------------------------------------------------
 
+        public void StartWave()
+        {
+            NextWave(GameStateDispatcher.GAMESTART);
+        }
+
         public void NextWave(string state)
         {
             if (state == GameStateDispatcher.GAMESTART)
@@ -57,7 +64,7 @@ namespace Habun
         {
             foreach (var wave in nextWave)
             {
-                if (wave.spawnPositions.Count > 0)
+                if (wave.spawnPositions != null && wave.spawnPositions.Count > 0)
                 {
                     var randomIndex = Random.Range(0, wave.spawnPositions.Count);
                     var randomPosition = wave.spawnPositions[randomIndex].position;
@@ -67,9 +74,10 @@ namespace Habun
                 }
                 else
                 {
+                    var centerPoint = new Location(MapManager.Instance.mapWidth / 2, MapManager.Instance.mapLength / 2).ToVector();
                     var randomRadius = Random.Range(wave.minRadius, wave.maxRadius);
                     var randomPoint = Random.insideUnitCircle * randomRadius;
-                    var randomPosition = new Vector3(randomPoint.x, 0.0f, randomPoint.y);
+                    var randomPosition = new Vector3(centerPoint.x + randomPoint.x.RoundToInt(), 0.0f, centerPoint.z + randomPoint.y.RoundToInt());
                     var randomRotation = Quaternion.LookRotation(-1 * randomPosition.normalized);
                     var instance = PoolManager.Instance.Pick(wave.prefab);
                     instance.transform.SetPositionAndRotation(randomPosition + spawnOffset, randomRotation);
@@ -77,6 +85,18 @@ namespace Habun
 
                 yield return new WaitForSeconds(wave.spawnInterval);
             }
+        }
+
+        // MONOBEHAVIOUR METHODS: ----------------------------------------------------
+
+        private void OnEnable()
+        {
+            IngameTaskManager.Instance.OnStartGame += StartWave;
+        }
+
+        private void OnDisable()
+        {
+            IngameTaskManager.Instance.OnStartGame -= StartWave;
         }
 
     }

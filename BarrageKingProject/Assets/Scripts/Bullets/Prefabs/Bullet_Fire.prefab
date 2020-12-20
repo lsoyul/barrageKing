@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6345754656958844840}
   - component: {fileID: 7129087960340634272}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: collider3d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 1833542408857336137}
   - component: {fileID: 1833542408857336136}
   - component: {fileID: 7612878512452920573}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet_Fire
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833542409008493128}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833542409862805211}
   - component: {fileID: 1833542409862805208}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 3346061729751244886}
   - component: {fileID: 3224307608000334062}
   - component: {fileID: 3222899691823323756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5115,7 +5115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2856949194951590487}
   - component: {fileID: 674373260141754894}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: collider2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5161,7 +5161,7 @@ GameObject:
   - component: {fileID: 1549397702274564040}
   - component: {fileID: 8001681701222629773}
   - component: {fileID: 7604805528719452686}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10040,7 +10040,7 @@ GameObject:
   - component: {fileID: 5527447244043559781}
   - component: {fileID: 5654388001301648919}
   - component: {fileID: 5654702876167221471}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14964,7 +14964,7 @@ GameObject:
   - component: {fileID: 8540562087322216586}
   - component: {fileID: 8383350916463150686}
   - component: {fileID: 8382270969445110504}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireRising
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19888,7 +19888,7 @@ GameObject:
   - component: {fileID: 8581028816651789046}
   - component: {fileID: 8486219435346992932}
   - component: {fileID: 8485282096242087664}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RingNova
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24785,7 +24785,7 @@ GameObject:
   - component: {fileID: 8578217201447549624}
   - component: {fileID: 8486319999149325138}
   - component: {fileID: 8485046063216478834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29664,7 +29664,7 @@ GameObject:
   - component: {fileID: 8577731869772791804}
   - component: {fileID: 8486977931629509832}
   - component: {fileID: 8485785231033328850}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnergyNovaRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34550,7 +34550,7 @@ GameObject:
   - component: {fileID: 8580768446707684426}
   - component: {fileID: 8486236764718544054}
   - component: {fileID: 8485332494525075588}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterSphereGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39420,7 +39420,7 @@ GameObject:
   - component: {fileID: 8578191315121325094}
   - component: {fileID: 8486914456308052910}
   - component: {fileID: 8486612899591833840}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HorizontalGlowRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44335,7 +44335,7 @@ GameObject:
   - component: {fileID: 8577799462975181040}
   - component: {fileID: 8486189391056218580}
   - component: {fileID: 8484985021425041016}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CenterGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49259,7 +49259,7 @@ GameObject:
   - component: {fileID: 8578058113409918230}
   - component: {fileID: 8483201126652663302}
   - component: {fileID: 8485275535618071564}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: VerticalGlowRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54129,7 +54129,7 @@ GameObject:
   - component: {fileID: 8611597749654841951}
   - component: {fileID: 8611597749654841948}
   - component: {fileID: 8611597749654841949}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireEnchant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59012,7 +59012,7 @@ GameObject:
   - component: {fileID: 8662251626299710302}
   - component: {fileID: 8855279926873676142}
   - component: {fileID: 8855079863068077984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 3d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63905,7 +63905,7 @@ GameObject:
   - component: {fileID: 8658462557925744740}
   - component: {fileID: 8855933183448091508}
   - component: {fileID: 8854727451769379692}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SparkTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68775,7 +68775,7 @@ GameObject:
   - component: {fileID: 8662543418089175920}
   - component: {fileID: 8856076407650079688}
   - component: {fileID: 8854668456828076362}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SolidTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

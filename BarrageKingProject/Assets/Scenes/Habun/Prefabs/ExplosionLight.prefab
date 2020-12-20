@@ -4892,7 +4892,7 @@ GameObject:
   - component: {fileID: 5529328768830169518}
   - component: {fileID: 5529328768830169519}
   - component: {fileID: 5655838956233016996}
-  - component: {fileID: 5529328768830169513}
+  - component: {fileID: 636576807620610579}
   m_Layer: 0
   m_Name: ExplosionLight
   m_TagString: Untagged
@@ -9726,7 +9726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     _usage: 0
-    _value: 10
+    _value: 50
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -9814,7 +9814,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &5529328768830169513
+--- !u!114 &636576807620610579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9834,7 +9834,7 @@ MonoBehaviour:
     _variableInstancer: {fileID: 0}
   duration:
     _usage: 0
-    _value: -1
+    _value: 1
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
