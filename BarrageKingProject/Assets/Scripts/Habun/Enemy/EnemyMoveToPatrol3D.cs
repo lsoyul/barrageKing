@@ -18,16 +18,6 @@ namespace Habun
         [SerializeField]
         private float lerpDelta = 8.0f;
 
-        public override bool PrePerform()
-        {
-            if (patrols.Count == 0)
-            {
-                return false;
-            }
-
-            return base.PrePerform();
-        }
-
         public override EActionStatus Perform()
         {
             moveTarget = moveTarget ? moveTarget : patrols.Get(Random.Range(0, patrols.Count)).transform;

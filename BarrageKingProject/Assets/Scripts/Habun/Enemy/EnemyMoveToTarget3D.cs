@@ -17,16 +17,6 @@ namespace Habun
         [SerializeField]
         private float lerpDelta = 8.0f;
 
-        public override bool PrePerform()
-        {
-            if (!sensor.HasTarget)
-            {
-                return false;
-            }
-
-            return base.PrePerform();
-        }
-
         public override EActionStatus Perform()
         {
             if (!sensor.HasTarget)
